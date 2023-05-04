@@ -27,7 +27,7 @@ const About = () => {
             to supplement my software development and theory classes. I'm also
             enthused to be developing for research on code LLMs and active in
             AerospaceNU, where I am working on the engine control software for a
-            liquid-fuelled rocket.
+            liquid-fuelled rocket. NEED TO ADD IMAGE
           </p>
         </div>
         <div className= 'col-span-1 m-auto'>
