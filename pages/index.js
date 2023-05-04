@@ -12,9 +12,10 @@ export default function Home() {
       <title>Anushka Kulkarni | Full Stack Developer</title>
       <meta name = "description" content="Generaged by create next app" />
       <link rel="icon" href="/favicon.ico"/>
-
     </Head>
     <Navbar />
+
+
 
     </div>
   )
