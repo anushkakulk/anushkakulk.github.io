@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+      @apply bg-[#F5F5F3] text-[#100F0D] tracking-wide
+  }
+
+  h1, h2, h3, h4, h5, h5 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#8FC0A9] to-[#C8D5B9] text-white
+  }
+}
+
+
+
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +53,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
