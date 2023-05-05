@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from "react";
 const token =
   "BQB-_04bhFJAbKC3c_GMTZLUMUCUY3BsiaAUvrOCw8ojQnhvbLGRpH1-1FDS-qEz85kNIKvKKA7rOWsMhNHB6jxHeA13dagkOQhlLQ8kdUheenDez3dX0QkQP8zoqvHpc0dhgbFQHpzyZ5FkAGelxq-a2ub8haJFHm2JDSFL-wwkAA2q5eqelh0lIxfI5zK4gPw1eHhVTdlGRggVlTqpzI72McHeM3WsPyXzMWeHJ6cAJcSxOSmF6bxwPBPBQl4-ewhyV6OwiXGyWXVvKmA8SdvUUUdBD3o2wOBoWTwLLH5RXM3cQsEV-5QqLi19q2o8DvL1bSJxJxnoY-91BpMIQvMjTzZThjbkFg";
-async function fetchWebApi(endpoint, method, body) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    method,
-    body: JSON.stringify(body),
-  });
-  return res.json(); // remove await
-}
 
-async function getTopTracks() {
-  const tracks = await fetchWebApi(
-    "v1/me/top/tracks?time_range=short_term&limit=5",
-    "GET"
-  );
-  return tracks.items.map((track) => {
-    return {
-      ...track,
-      uri: track.uri,
-    };
-  });
-}
+  async function fetchWebApi(endpoint, method, body) {
+    const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method,
+      body:JSON.stringify(body)
+    });
+    return await res.json();
+  }
+
+  async function getTopTracks() {
+    const tracks = await fetchWebApi(
+      "v1/me/top/tracks?time_range=short_term&limit=5",
+      "GET"
+    );
+    return tracks.items.map((track) => {
+      return {
+        ...track,
+        uri: track.uri
+      };
+    });
+  }
+  
 
 async function getRecommendations() {
   const topTracks = await getTopTracks();
-  const artistIds = topTracks.map((track) => track.artists[0].id).join(",");
+  const artistIds = topTracks
+    .map((track) => track.artists[0].id)
+    .join(",");
   const recommendations = await fetchWebApi(
     `v1/recommendations?limit=5&seed_artists=${artistIds}`,
     "GET"
@@ -35,10 +39,11 @@ async function getRecommendations() {
   return recommendations.tracks.map((track) => {
     return {
       ...track,
-      uri: track.uri,
+      uri: track.uri
     };
   });
 }
+
 
 
 const Interests = () => {
@@ -57,7 +62,7 @@ const Interests = () => {
     fetchTopTracks();
     fetchRecommendations();
   }, []);
-
+  
   return (
     <div id="interests" className="w-full lg:h-screen py-3 p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
