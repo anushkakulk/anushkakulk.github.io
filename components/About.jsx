@@ -6,7 +6,7 @@ const About = () => {
     <div className="w-full md:h=screen p-2 felx items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <h2 className="uppercase text-xl tracking-wident text-[#68B0AB]">
+          <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
             About Me
           </h2>
           <p className="py-2  text-gray-600">

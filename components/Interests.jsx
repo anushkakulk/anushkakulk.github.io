@@ -1,17 +1,33 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const token =
-  "BQBYvGpovLZoiSVMBQcUG1nSUz3wpnU5HKGvkBTFDTKbeLFUn_X1ANsApu6zU3MjTzfs1iCa-LRKSmBhBAz4VXzC9A34PuLmq09xbViYqysV6HtTGhxiTcXiUbb1j4ufx4R_gMMW-1D9mpPyWY3P-IEYBeAAj4VT6sx51chpNcF-wxROfUkfQv5j_mXrnbDfiJIYDgiiFdBlfg66NJWAfFXiAVVQBJNnYYvtsRs56stegxHsVZJ1qlMcXo7_ckq8nw6n0UyUjd9LnrBqOyK8VpuvEqvk";
+async function refreshAccessToken() {
+  const response = await fetch("https://accounts.spotify.com/api/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET),
+    },
+    body: "grant_type=refresh_token&refresh_token=" + REFRESH_TOKEN,
+  });
 
-async function fetchWebApi(endpoint, method, body) {
+  const data = await response.json();
+  access_token = data.access_token;
+}
+
+// call this function initially to obtain the access token
+refreshAccessToken();
+
+//setInterval(refreshAccessToken, 3600000); // call this function every hour to refresh the access token
+
+async function fetchWebApi(endpoint, method, body = null) {
   const res = await fetch(`https://api.spotify.com/${endpoint}`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${access_token}`,
     },
     method,
-    body: JSON.stringify(body),
+    body: body ? JSON.stringify(body) : null,
   });
-  return res.json(); // remove await
+  return res.json();
 }
 
 async function getTopTracks() {
@@ -42,13 +58,13 @@ async function getRecommendations() {
   });
 }
 
+
 const Interests = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [topTracks, setTopTracks] = useState([]);
   const [refresh, setRefresh] = useState(false); // refresh recommendations state variable
   const [isVisible, setIsVisible] = useState(false); // fade in state variable
   const interestsRef = useRef(null);
-
 
   useEffect(() => {
     const options = {
@@ -84,7 +100,6 @@ const Interests = () => {
     fetchRecommendations();
   }, [refresh]); // add refresh as a dependency
 
- 
   const handleRefresh = () => {
     setRefresh(!refresh); // toggle refresh state
   };
@@ -99,15 +114,24 @@ const Interests = () => {
         <h2 className="uppercase text-xl text-right tracking-wident text-[#68B0AB] justify-end ml-auto">
           Interests
         </h2>
-        <p className="justify-end text-right">
-          In my free time, I love consuming media, whether it be reading a new
-          historical fiction book or creating random but perfectly collated
-          music playlists. Here's what I'm diving into at the moment!
-        </p>
+        <div className="w-2/12">
+          <p className="text-right">
+            In my free time, I love consuming media, whether it be reading a new
+            historical fiction book or creating random but perfectly collated
+            music playlists. Here's what I'm diving into at the moment!
+          </p>
+        </div>
 
-        <h3 className="uppercase text-xl tracking-wident text-[##8FC0A9]">
+        <h3 className="uppercase text-md text-center tracking-wident py-2 text-[##8FC0A9]">
           Music
         </h3>
+        <p className="w-[1240px] text-center">
+          as a lover of music and algorithms, spotify has my heart. i'm hoping
+          to fiddle around with the Spotify Web API soon and create something
+          that combines my passions. for now, enjoy what I'm listening to,
+          courtesy of the API! here are my top tracks from the last 30 days.
+          check back soon for updates!
+        </p>
         <div className="grid grid-cols-3 gap-8 justify-center items-center my-3 mx-auto">
           {topTracks.slice(0, 3).map(({ id, name, artists, uri }) => (
             <iframe
@@ -118,7 +142,7 @@ const Interests = () => {
               allowtransparency="true"
               allow="encrypted-media"
               key={id}
-              className={`${isVisible ? "fade-upwards" : ""}`}
+              className={`transform ${isVisible ? "fade-upwards" : ""}`}
             ></iframe>
           ))}
         </div>
@@ -132,9 +156,21 @@ const Interests = () => {
               allowtransparency="true"
               allow="encrypted-media"
               key={id}
-              className={`${isVisible ? "fade-upwards" : ""}`}
+              className={`transform ${isVisible ? "fade-upwards" : ""}`}
             ></iframe>
           ))}
+        </div>
+        <p className="w-[1240px] py-2 text-center">
+          from the spotify recommendation algorithm, here are 5 recommendations based on
+          the songs i listen to
+        </p>
+        <div className="flex flex-col items-center">
+          <button
+            className="h-12 w-30 px-6 my-2 hover:scale-105 ease-in duration-300"
+            onClick={() => setRefresh((prev) => !prev)}
+          >
+            Refresh Recommendations
+          </button>
         </div>
 
         <div className="grid grid-cols-3 gap-8 justify-center items-center my-3 mx-auto">
@@ -147,7 +183,7 @@ const Interests = () => {
               allowtransparency="true"
               allow="encrypted-media"
               key={id}
-              className={`${isVisible ? "fade-upwards" : ""}`}
+              className={`transform ${isVisible ? "fade-upwards" : ""}`}
             ></iframe>
           ))}
         </div>
@@ -161,14 +197,10 @@ const Interests = () => {
               allowtransparency="true"
               allow="encrypted-media"
               key={id}
-              className={`${isVisible ? "fade-upwards" : ""}`}
+              className={`transform ${isVisible ? "fade-upwards" : ""}`}
             ></iframe>
           ))}
         </div>
-
-        <button onClick={() => setRefresh((prev) => !prev)}>
-          Refresh Recommendations
-        </button>
       </div>
     </div>
   );

@@ -26,6 +26,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+priv.env
+spotifycred.env.local
 
 # vercel
 .vercel

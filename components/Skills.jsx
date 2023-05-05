@@ -67,9 +67,9 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <h2 className="uppercase text-xl tracking-wident text-[#68B0AB]">
-          Skills
-        </h2>
+      <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
+            Skills
+          </h2>
         <div className="grid grid-cols-3 gap-8">
           <div className="col-span-2 grid grid-cols-2 gap-8">
             {skillsList.slice(0, 3).map((skill, index) => (
