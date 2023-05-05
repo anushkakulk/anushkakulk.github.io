@@ -118,7 +118,7 @@ const Skills = () => {
             <p className="text-[#68B0AB]">
               Other Languages, Tools, and Frameworks
             </p>
-            <div class="grid grid-cols-2 gap-4 py-4">
+            <div className="grid grid-cols-2 gap-4 py-4">
               <div className="justify-center items-center text-center">
                 <p> SQL</p>
                 <p>Node JS</p>

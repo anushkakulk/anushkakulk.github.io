@@ -2,6 +2,7 @@ import React from "react";
 import { FaLinkedinIn, FaGithub, FaGitlab } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+
 const Main = () => {
   return (
     <div className="w-full h-screen text-center">
