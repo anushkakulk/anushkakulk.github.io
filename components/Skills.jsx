@@ -2,11 +2,11 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import JavaLogo from "../public/assets/skills/java-logo.png";
 import PythonLogo from "../public/assets/skills/python-logo-only.png";
-import WebDevLogos from "../public/assets/skills/webdev-logos.png";
+import WebDevLogos from "../public/assets/skills/revised-webdev.png";
 import ReactLogo from "../public/assets/skills/react-logo.webp";
 import CPPLogo from "../public/assets/skills/c++logo.png";
 import GithubLogo from "../public/assets/skills/github1.png";
-import ReactTypingEffect from 'react-typing-effect';
+import ReactTypingEffect from "react-typing-effect";
 
 const skillsList = [
   {
@@ -20,7 +20,7 @@ const skillsList = [
     alt: "Python logo",
   },
   {
-    name: "HTML, CSS, JS, TS",
+    name: "Front-End",
     logo: WebDevLogos,
     alt: "Web development logos",
   },
@@ -42,41 +42,25 @@ const skillsList = [
 ];
 
 const Skills = () => {
-  const [isObserverInitialized, setIsObserverInitialized] = useState(false);
-  const skillsRef = useRef(null);
-
-  useEffect(() => {
-    const skillsElement = skillsRef.current;
-    console.log(skillsElement); // check if skillsElement is returning a valid element
-    const skillsObserver = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.25 }
-    );
-  
-    if (skillsElement) {
-      skillsObserver.observe(skillsElement);
-      setIsObserverInitialized(true);
-    }
-  
-    return () => skillsObserver.disconnect();
-  }, []);
-
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-      <h2 className="uppercase text-3xl tracking-widest text-[#68B0AB]">
-      <ReactTypingEffect text = "skills" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
+    <div id="skills" className="w-full h-full p-2 lg:h-screen">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-2">
+          <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl">
+            <ReactTypingEffect
+              text="skills"
+              eraseDelay={5000}
+              eraseSpeed={100}
+              typingDelay={1000}
+            />
           </h2>
-        <div className="grid grid-cols-3 gap-8">
-          <div className="col-span-2 grid grid-cols-2 gap-8">
-            {skillsList.slice(0, 3).map((skill, index) => (
+      
+
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-3">
+            {skillsList.map((skill, index) => (
               <div
                 key={index}
-                className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
+                className="shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
               >
                 <div className="grid grid-cols-2 gap-4 justify-center items-center">
                   <div className="m-auto">
@@ -87,41 +71,20 @@ const Skills = () => {
                       alt={skill.alt}
                     />
                   </div>
-                  <div className="flex flex-col items-center justify-center">
-                    <h3>{skill.name}</h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-            {skillsList.slice(3, 6).map((skill, index) => (
-              <div
-                key={index}
-                className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
-              >
-                <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                  <div className="m-auto">
-                    <Image
-                      src={skill.logo}
-                      width={64}
-                      height={64}
-                      alt={skill.alt}
-                    />
-                  </div>
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center text-center justify-center">
                     <h3>{skill.name}</h3>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="col-span-1 flex flex-col justify-center items-center">
-            <p className="text-[#68B0AB]">
+          <div className="flex flex-col justify-center items-center lg:col-span-1">
+            <p className="text-[#68B0AB] text-center mb-4 lg:mb-0">
               Other Languages, Tools, and Frameworks
             </p>
             <div className="grid grid-cols-2 gap-4 py-4">
               <div className="justify-center items-center text-center">
-                <p> SQL</p>
+                <p>SQL</p>
                 <p>NodeJS</p>
                 <p>Tailwind</p>
               </div>

@@ -28,7 +28,6 @@ export default function Home() {
     <Projects />
     <Interests1 />
     <Interests2 />
-    <Contact />
     </div>
   )
 }
