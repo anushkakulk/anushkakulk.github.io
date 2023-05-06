@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import { FaMusic } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // import carousel css
+import { Carousel } from "react-responsive-carousel"; // import carousel component
+import { ImageCarousel } from "../lib/books";
+import Image from "next/image";
 
 const MY_ID = process.env.CLIENT_ID;
 const MY_SECRET = process.env.CLIENT_SECRET;
 const MY_REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
 let access_token =
-  "BQAJgPIL3Vk_WEV7De8i9IUP7bdtduWAogM-r4e4oVfIQJcPq_W0ZOq39r0ld7xGLsid2ls4cweKsJbgUsr96NjeOF0h9dXhh668NMCTK0V29JHwzgLGAK8c8bL0ZOJN9l_6c7CcmdC8dQogDgohZKoOKV7o0BxdMmmix-VwIHn0GIMUVD2KN-qY267UvvoaDOKRMAzFstkkGeq-QS2eL4i1DjiNgYBYoQkDX6hTYxXuZCj8kvEHbhvLWEJl3PmcJgxiQTpjPR7okvSlfxVJJHd8baJY";
+  "BQALkVC-mtsweFqBPHDK2QUpgfPrHE4iiHFNmS1yiz7nFY7SNm7IDxhBX9iMGZFKaoe5KVC6ScsLEJFCiGxOuEDP-8ujPr8Zc1dEMeO7LlJ0-h_qf_gD4_11TFwcAf-Os0Y0a2HqAtnTpI5AoW3rQPRXGDad4zMTfwt4Ejb3Z41Pg7FJhZrdiGgdZCAS_YTF7hMrll1WwTi0spfhwBV4cnkBm42ppUBAk0Hnj5e_fb89Hu9lw5Es2SPz1l0VR-doPRzGbNCIRu2AB-8YoFimoSpZz2QU";
 console.log(process.env.CLIENT_ID);
 
 async function refreshAccessToken() {
@@ -134,18 +139,19 @@ const Interests1 = () => {
           </p>
         </div>
         <div className="max-w-6xl mx-auto flex flex-col justify-center h-full">
-          <h2 className="uppercase text-md md:text-lg text-center m-auto items-center tracking-wider py-2">
+          <h2 className="uppercase text-lg md:text-lg text-center m-auto items-center tracking-wider py-2">
             <FaMusic />
           </h2>
-
-          <p className="text-center max-w-2xl mx-auto">
-            As a lover of music and algorithms, Spotify has my heart. I'm hoping
-            to fiddle around with the Spotify Web API soon and create something
-            that combines my passions. For now, enjoy what I'm listening to,
-            courtesy of some API calls! Here are my top tracks from the last 30
-            days. Check back soon for updates!
-          </p>
-          <div className="grid grid-cols-3 gap-8 justify-center items-center my-3 mx-auto">
+          <div className="w-full p-4">
+            <p className="text-center text-sm pt-2 max-w-2xl mx-auto md:max-w-none">
+              As a lover of music and algorithms, Spotify has my heart. I'm
+              hoping to fiddle around with the Spotify Web API soon and create
+              something that combines my passions. For now, enjoy what I'm
+              listening to, courtesy of some automated API calls! Here are my
+              top tracks from the last 30 days. Check back soon for updates!
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-8 md:flex-row sm:flex-row justify-center items-center my-3 mx-auto">
             {topTracks.slice(0, 3).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
@@ -161,7 +167,7 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
-          <div className="flex gap-8 justify-center items-center my-3 mx-auto">
+          <div className="flex gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {topTracks.slice(3, 5).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
@@ -190,7 +196,7 @@ const Interests1 = () => {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-8 justify-center items-center my-3 mx-auto">
+          <div className="flex flex-wrap gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommendations.slice(0, 3).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
@@ -206,7 +212,7 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
-          <div className="flex gap-8 justify-center items-center my-3 mx-auto">
+          <div className="flex gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommendations.slice(3, 5).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${

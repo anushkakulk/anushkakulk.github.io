@@ -18,7 +18,7 @@ const Projects = () => {
           <ProjectItem
             title='Objective-C Translator'
             backgroundImg={multipleImg}
-            projectUrl='/property'
+            projectUrl='/research'
             tech='Python, Obj-C, Code LLMs'
           />
           <ProjectItem

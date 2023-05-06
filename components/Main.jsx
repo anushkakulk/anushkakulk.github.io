@@ -6,7 +6,7 @@ import ReactTypingEffect from 'react-typing-effect';
 
 const Main = () => {
   return (
-    <div className="w-full h-screen text-center">
+    <div id='home' className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full mx-auto h-full p-2 flex justify-center items-center">
         <div>
           <h1 className="py-4 text-[#696D7D]">
@@ -17,7 +17,7 @@ const Main = () => {
             with a passion for artificial intelligence, robotics, and
             linguistics. I love engaging in innovative software projects and
             acquiring new skills. Currently exploring responsive front-end web
-            applications (exhibit a: this site :) ) and learning back-end tools
+            applications (exhibit a: this site :) ), game design, and learning back-end tools
             and frameworks.
           </p>
           

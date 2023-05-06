@@ -4,81 +4,95 @@ import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaSpotify, FaDiscord, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { RiCopyrightLine } from "react-icons/ri";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import ReactTypingEffect from 'react-typing-effect';
+import ReactTypingEffect from "react-typing-effect";
+import ContactImg from "../public/assets/profile-pic.png";
 
 const Contact = () => {
   return (
-        <div id="contact" className="relative w-full lg:h-screen">
-          <div className="absolute bottom-0 w-full bg-gray-200 py-4 text-center">
-            <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
-            <ReactTypingEffect text = "Contact" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
-            </h2>
-            <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-              <div className="w-full h-full p-2 justify-end items-end text-end">
-                <p>Here's how you can reach out to me:</p>
-              </div>
-              <div className="grid lg:grid-cols-5 gap-8">
-                {/* left */}
-                <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-2">
-                  <div className="lg:p-4 h-full ">
-                    <div>
-                      <div className="flex items-center justify-between py-4">
-                        <a
-                          href="https://www.linkedin.com/in/clint-briley-50056920a/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                            <FaLinkedinIn />
-                          </div>
-                        </a>
-                        <a
-                          href="https://www.discordapp.com/users/1019442796941291603/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                            <FaDiscord />
-                          </div>
-                        </a>
-                        <a
-                          href="https://github.com/anushkakulk"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                            <FaGithub />
-                          </div>
-                        </a>
-
-                        <a
-                          href="https://open.spotify.com/user/kulkarni.amk366?si=95c5471446614589"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                            <FaSpotify />
-                          </div>
-                        </a>
-
-                        <a
-                          href="mailto:anushka.mkul@gmail.com"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                            <AiOutlineMail />
-                          </div>
-                        </a>
-                      </div>
+    <div id="contact" className="relative w-full lg:h-screen py-20">
+      <div className="absolute bottom-0 w-full bg-gray-200 py-4 text-center">
+        <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+          <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
+            <ReactTypingEffect
+              text="Contact"
+              eraseDelay={5000}
+              eraseSpeed={100}
+              typingDelay={1000}
+            />
+          </h2>
+          <div>
+            <h2 className="py-2">Let's Connect</h2>
+            <p className="py-4">
+              I am best reachable by email, but feel free to approach me on
+              these platforms.
+            </p>
+          </div>
+          <div className=" w-full h-full shadow-xl shadow-[#8FC0A9] rounded-xl p-4">
+            <div className="lg:p-4 h-full ">
+              <div>
+                <div className="flex items-center justify-between py-4">
+                  <a
+                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaLinkedinIn />
                     </div>
-                  </div>
+                  </a>
+                  <a
+                    href="https://github.com/anushkakulk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaGithub />
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:anushka.mkul@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <AiOutlineMail />
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.discordapp.com/users/1019442796941291603/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaDiscord />
+                    </div>
+                  </a>
+                  <a
+                    href="https://open.spotify.com/user/kulkarni.amk366?si=95c5471446614589"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaSpotify />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+          <div>
+            <p className="py-4">
+              Copyright 2023 Anushka Kulkarni. Built with Next.js and Tailwind.
+              Hosted on Github Pages.
+            </p>
+          </div>
         </div>
+      </div>
+    </div>
   );
 };
 

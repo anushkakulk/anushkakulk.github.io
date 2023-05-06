@@ -44,8 +44,9 @@ const skillsList = [
 const Skills = () => {
   return (
     <div id="skills" className="w-full h-full p-2 lg:h-screen">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-2">
-          <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+        <div className="w-full">
+          <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl text-center py-5">
             <ReactTypingEffect
               text="skills"
               eraseDelay={5000}
@@ -53,33 +54,32 @@ const Skills = () => {
               typingDelay={1000}
             />
           </h2>
-      
-
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
-          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-3">
-            {skillsList.map((skill, index) => (
-              <div
-                key={index}
-                className="shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
-              >
-                <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                  <div className="m-auto">
-                    <Image
-                      src={skill.logo}
-                      width={64}
-                      height={64}
-                      alt={skill.alt}
-                    />
-                  </div>
-                  <div className="flex flex-col items-center text-center justify-center">
-                    <h3>{skill.name}</h3>
-                  </div>
+        </div>
+        <div className="grid grid-cols-3 gap-6 my-8">
+          {skillsList.map((skill, index) => (
+            <div
+              key={index}
+              className="shadow-xl rounded-xl py-2 hover:scale-105 ease-in  duration-300"
+            >
+              <div className="grid grid-cols-2 gap-4 justify-center items-center">
+                <div className="m-auto">
+                  <Image
+                    src={skill.logo}
+                    width={64}
+                    height={64}
+                    alt={skill.alt}
+                  />
+                </div>
+                <div className="flex flex-col items-center text-center justify-center m-auto">
+                  <h3>{skill.name}</h3>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="flex flex-col justify-center items-center lg:col-span-1">
-            <p className="text-[#68B0AB] text-center mb-4 lg:mb-0">
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="text-center lg:text-left">
+            <p className="text-[#68B0AB] text-center text-lg mb-4">
               Other Languages, Tools, and Frameworks
             </p>
             <div className="grid grid-cols-2 gap-4 py-4">
@@ -87,6 +87,7 @@ const Skills = () => {
                 <p>SQL</p>
                 <p>NodeJS</p>
                 <p>Tailwind</p>
+            
               </div>
               <div className="justify-center items-center text-center">
                 <p>Docker</p>
@@ -94,12 +95,25 @@ const Skills = () => {
                 <p>Microsoft Office</p>
               </div>
             </div>
-            <p className="flex justify-center items-center text-center">
-              Some great CS courses I've taken include Algorithms and Data,
-              Object Oriented Design, Database Design, Foundations of
-              Cybersecurity, Game Programming, Computer Systems, Artificial
-              Intelligence, and Robotic Science and Systems.
+          </div>
+          <div className="text-justify m-auto">
+            <p className="text-[#68B0AB] text-center text-lg mb-4">
+              Relavent Coursework
             </p>
+            <div className="grid grid-cols-2  gap-6 py-4">
+              <div className="justify-center items-center text-center">
+                <p>Algorithms and Data</p>
+                <p>Object Oriented Design</p>
+                <p>Foundations of Cybersecurity</p>
+                <p>Game Programming</p>
+              </div>
+              <div className="justify-center items-center text-center">
+                <p>Database Design</p>
+                <p>Artificial Intelligence</p>
+                <p>Robotic Science and Systems</p>
+                <p>Computer Systems</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
