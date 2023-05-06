@@ -7,7 +7,7 @@ const About = () => {
     <div id='about' className="w-full md:h=screen p-2 felx items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <h2 className="uppercase text-3xl tracking-widest text-[#68B0AB]">
+          <h2 className="uppercase text-3xl pt-10 tracking-widest text-[#68B0AB]">
           <ReactTypingEffect text = "About Me" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
           <div className = 'py-5'>

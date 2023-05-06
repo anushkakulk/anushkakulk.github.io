@@ -74,7 +74,9 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}
+        className={
+          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+        }
       >
         <div
           className={
@@ -87,8 +89,8 @@ const Navbar = () => {
             <Image
               src="/../public/assets/revised-navbar-logo.png"
               alt="/"
-              width="250"
-              height="120"
+              width="200"
+              height="75"
             />
             <div />
             <div

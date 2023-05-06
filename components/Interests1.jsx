@@ -11,8 +11,7 @@ const MY_ID = process.env.CLIENT_ID;
 const MY_SECRET = process.env.CLIENT_SECRET;
 const MY_REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
-let access_token =
-  "BQALkVC-mtsweFqBPHDK2QUpgfPrHE4iiHFNmS1yiz7nFY7SNm7IDxhBX9iMGZFKaoe5KVC6ScsLEJFCiGxOuEDP-8ujPr8Zc1dEMeO7LlJ0-h_qf_gD4_11TFwcAf-Os0Y0a2HqAtnTpI5AoW3rQPRXGDad4zMTfwt4Ejb3Z41Pg7FJhZrdiGgdZCAS_YTF7hMrll1WwTi0spfhwBV4cnkBm42ppUBAk0Hnj5e_fb89Hu9lw5Es2SPz1l0VR-doPRzGbNCIRu2AB-8YoFimoSpZz2QU";
+let access_token = 'BQDSxtUK7lw1ac3zM6YnQXKMQjgMDpKx0caZnX4xCUT9D92XrSggz1D-uj5s8NPQr0gHqODkZrTWxFseBLZWObqwHlbuZtXviFPmHxUDWV4Xjnl7qfZgg27_HjDUoZNrDfwMvlrzw3XUu8QxDB7W9bXlJC0YLTO15HyCpZm_vUgBtGsRalCqk3wSZc9q9CfohoNDtaErQi8mMVwOtne55nJHtOfEAY4ZtHmCDEBB1mS3MnLSxrZ-TghFXDfVkPU8Viy5ZseXBijCe8CsXUrzPhOc3PZV';
 console.log(process.env.CLIENT_ID);
 
 async function refreshAccessToken() {
@@ -116,12 +115,12 @@ const Interests1 = () => {
   return (
     <div
       id="interests1"
-      className="w-full lg:h-screen py-3 p-2"
+      className="w-full lg:h-screen pt-10 p-2"
       ref={interestsRef}
     >
       <div className="max-w-6xl mx-auto flex flex-wrap">
         <div className="w-full lg:w-1/2 p-4">
-          <h2 className="uppercase text-3xl md:text-3xl text-center tracking-wider pt-2 text-[#68B0AB]">
+          <h2 className="uppercase text-3xl md:text-3xl text-center tracking-wider pt-10 text-[#68B0AB]">
             <ReactTypingEffect
               text="Current state of Anushka"
               eraseDelay={5000}
@@ -132,7 +131,7 @@ const Interests1 = () => {
           </h2>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/2 p-4">
-          <p className="text-center pt-2 max-w-2xl mx-auto">
+          <p className="text-center pt-10 max-w-2xl mx-auto">
             In my free time, I love consuming media, whether it be reading a new
             historical fiction book or creating random but perfectly collated
             music playlists. Here's what I'm diving into at the moment!
