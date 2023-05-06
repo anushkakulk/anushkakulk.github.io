@@ -6,6 +6,7 @@ import WebDevLogos from "../public/assets/skills/webdev-logos.png";
 import ReactLogo from "../public/assets/skills/react-logo.webp";
 import CPPLogo from "../public/assets/skills/c++logo.png";
 import GithubLogo from "../public/assets/skills/github1.png";
+import ReactTypingEffect from 'react-typing-effect';
 
 const skillsList = [
   {
@@ -24,7 +25,7 @@ const skillsList = [
     alt: "Web development logos",
   },
   {
-    name: "React",
+    name: "ReactJS",
     logo: ReactLogo,
     alt: "React logo",
   },
@@ -67,8 +68,8 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-      <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
-            Skills
+      <h2 className="uppercase text-3xl tracking-widest text-[#68B0AB]">
+      <ReactTypingEffect text = "skills" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
         <div className="grid grid-cols-3 gap-8">
           <div className="col-span-2 grid grid-cols-2 gap-8">
@@ -121,7 +122,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 py-4">
               <div className="justify-center items-center text-center">
                 <p> SQL</p>
-                <p>Node JS</p>
+                <p>NodeJS</p>
                 <p>Tailwind</p>
               </div>
               <div className="justify-center items-center text-center">

@@ -5,13 +5,14 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaSpotify, FaDiscord, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import ReactTypingEffect from 'react-typing-effect';
 
 const Contact = () => {
   return (
         <div id="contact" className="relative w-full lg:h-screen">
           <div className="absolute bottom-0 w-full bg-gray-200 py-4 text-center">
             <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
-              Contact
+            <ReactTypingEffect text = "Contact" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
             </h2>
             <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
               <div className="w-full h-full p-2 justify-end items-end text-end">
@@ -32,7 +33,6 @@ const Contact = () => {
                             <FaLinkedinIn />
                           </div>
                         </a>
-
                         <a
                           href="https://www.discordapp.com/users/1019442796941291603/"
                           target="_blank"
