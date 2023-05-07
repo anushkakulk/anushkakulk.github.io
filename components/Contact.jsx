@@ -10,8 +10,8 @@ import ReactTypingEffect from "react-typing-effect";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen py-16">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+    <div id="contact" className="w-full lg:h-screen py-20 xl:py-30">
+      <div className="max-w-[1240px] m-auto px-2 py-20  w-full ">
         <h2 className="uppercase text-3xl text-center items-center tracking-wident text-[#68B0AB]">
           <ReactTypingEffect
             text="Contact"
@@ -24,7 +24,7 @@ const Contact = () => {
           <div>
             <p className="py-4 text-center">
               I am best reachable by email, but feel free to approach me on
-              these platforms.
+              the following platforms:
             </p>
           </div>
           <div className=" w-full h-full shadow-xl shadow-[#8FC0A9] rounded-xl p-4">
@@ -32,7 +32,7 @@ const Contact = () => {
               <div>
                 <div className="flex items-center justify-between py-4">
                   <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
+                    href="https://www.linkedin.com/in/anushkakulk"
                     target="_blank"
                     rel="noreferrer"
                   >

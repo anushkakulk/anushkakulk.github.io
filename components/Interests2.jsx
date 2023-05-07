@@ -7,22 +7,21 @@ import Image from "next/image";
 
 const Interests2 = () => {
   return (
-    <div id="interests2" className="w-full max-h-screen ">
-      <div className="max-w-[1240px] py-16 mx-auto flex flex-wrap">
+    <div id="interests2" className="w-full max-h-screen">
+      <div className="max-w-[1240px] lg:py-16 xl:p-64 xl:mb-40 mx-auto flex flex-wrap ">
         <div className="relative w-full">
           <div className="flex justify-center items-center ">
-            <h1 className="text-2xl">
+            <h1 className="text-2xl mb-6">
               <FaBook />
             </h1>
+            
           </div>
-          <p className="flex text-center py-4">
-            a stroll through the bookshelf: here are my latest and greatest
-            reads
-          </p>
+          <p className="text-center text-sm p-5 max-w-2xl mx-auto md:max-w-none"> a stroll through the bookshelf: my latest and greatest reads</p>
+
           <div className="mx-auto max-w-screen-lg lg:h-[75%]  pb-20 mt-2">
             <Carousel
               showArrows={true}
-              showThumbs={true}
+              showThumbs={false}
               className="mx-auto max-w-screen-lg h-screen sm:h-1/2 md:h-1/2 "
             >
               <div className="carousel-item">
@@ -53,8 +52,7 @@ const Interests2 = () => {
                 <p className="legend text-sm sm:text-lg font-bold mt-2 ">
                   Read in the summer before college, <i>No Exit</i> was a great
                   look into the chaos of existentialism. Short and sweet, it
-                  really packs a punch and makes the reader ponder about the
-                  absurdity of how we constantly perceive "the Other."{" "}
+                  really packs a punch. Truly left me thinking "huh... cool".{" "}
                 </p>
               </div>
               <div className="carousel-item">

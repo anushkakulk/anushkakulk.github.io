@@ -10,9 +10,9 @@ import ProjectItem from './ProjectItem';
 const Projects = () => {
   return (
     <div id='projects' className='w-full'>
-      <div className='max-w-[1240px] mx-auto px-2 py-16'>
-      <h2 className="uppercase text-3xl py-8 pt-10 tracking-wident text-[#68B0AB]">
-      <ReactTypingEffect text = "Projects" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
+      <div className='max-w-[1240px] mx-auto py-20'>
+      <h2 className="uppercase text-3xl p-2 py-2 sm:py-8 tracking-widest text-[#68B0AB]">
+          <ReactTypingEffect text = "Projects" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem

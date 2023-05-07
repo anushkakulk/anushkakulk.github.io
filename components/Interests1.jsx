@@ -12,7 +12,7 @@ const MY_SECRET = process.env.CLIENT_SECRET;
 const MY_REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
 let access_token =
-'BQCV56Z17r5lMqZD9Qy2Km1gaYe7zS7XDkMxz3EdDDJj1uU81eGbDtbzHilOVgdierrsfvp2qSxbe-bVmBh-_s38Ux863jMhYB50X73F_0_exJiyJWRe0RioiLaa7LozCPXLLYCNyFs3rmkPMJ-I-XCZiJHuhBCo_KgpFUqEwO5_dED-4W0-F-uiuN9WEqgzUQIfj_eDyw0WMmyGMQzq8Bnc1f9JifQKG3iKK87A0F8eTpWY-rtsKRiT7WH50C8eyX2S7FrbNWwCY6zqIYKS0OsHoJxj';
+'BQBHLUzlxXZH6vRV6yjt13R1M3obtISt5ZUGMLmgy1WMzJV2L7peavfcaTQaoYe0D7XM_C8KgYmjrM0N0ngrOPrMj7TUHkn-va0sTQmqNNSSOCaN6fi6sFpR_OQ3jwnQzPAXloR3SSCnxVPqjpzKny3mBLw2Bzvu2VGyib_O00nSa5NGer3DjVC9tFxEXlYptEtI79-V7bBu-_tdVNcKfk3laKEDtignoewoC_VfYl7fUwRiKEQJUBy7imkqGIZNShF9An7F826F-88XJD2QYoYpIQVF';
 console.log(process.env.CLIENT_ID);
 
 async function refreshAccessToken() {
@@ -126,7 +126,6 @@ const Interests1 = () => {
               text="Current state of Anushka"
               eraseDelay={5000}
               eraseSpeed={100}
-              typingSpeed={100}
               typingDelay={1000}
               className="text-l md:text-3xl"
             />
@@ -228,8 +227,7 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
- 
-        </div>   
+        </div>
       </div>
     </div>
   );

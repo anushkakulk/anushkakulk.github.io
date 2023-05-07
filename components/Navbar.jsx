@@ -86,16 +86,14 @@ const Navbar = () => {
           }
         >
           <div className="flex w-full items-center justify-between border-b border-gray-300 m4">
-            <h3 className="uppercase tracking-widest text-[#68B0AB]"> 
-            menu
-            </h3>
-           <div className="py-4">
-            <div
-              onClick={handleNav}
-              className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer scale-75"
-            >
-              <AiOutlineMenuFold size={25} />
-            </div>
+            <h3 className="uppercase tracking-widest text-[#68B0AB]">menu</h3>
+            <div className="py-4">
+              <div
+                onClick={handleNav}
+                className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer scale-75"
+              >
+                <AiOutlineMenuFold size={25} />
+              </div>
             </div>
           </div>
           <div className="py-4 flex flec-col">
@@ -121,13 +119,21 @@ const Navbar = () => {
               <div className="pt-35">
                 <div className="flex items-center justify-between  my-4 w-full sm:w-[80%] py-4 ">
                   <div className="logo-container logo-item mr-2 rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <a href="https://www.linkedin.com/in/anushkakulk">
+                    <a
+                      href="https://www.linkedin.com/in/anushkakulk"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <FaLinkedinIn />
                     </a>
                   </div>
 
                   <div className="logo-container logo-item ml-2 rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <a href="mailto:anushka.mkul@gmail.com">
+                    <a
+                      href="mailto:anushka.mkul@gmail.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <MdEmail />
                     </a>
                   </div>

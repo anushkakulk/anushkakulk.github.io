@@ -23,25 +23,42 @@ const Main = () => {
           
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4 ">
             <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://www.linkedin.com/in/anushkakulk">
+            <a
+                    href="https://www.linkedin.com/in/anushkakulk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                 <FaLinkedinIn />
               </a>
             </div>
 
             <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://github.com/anushkakulk">
+            <a
+                    href="https://github.com/anushkakulk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                 <FaGithub />
               </a>
             </div>
 
             <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="mailto:anushka.mkul@gmail.com">
+            <a
+                    href="mailto:anushka.mkul@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+
                 <MdEmail />
               </a>
             </div>
 
             <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://gitlab.com/anushka.mkul">
+            <a
+                    href="https://gitlab.com/anushka.mkul"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                 <FaGitlab />
               </a>
             </div>
