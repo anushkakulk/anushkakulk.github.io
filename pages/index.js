@@ -8,6 +8,8 @@ import Projects from '../components/Projects'
 import Interests1 from '../components/Interests1'
 import Interests2 from '../components/Interests2'
 import Contact from '../components/Contact'
+import Footer from "../components/Footer";
+
 
 import { Inter } from 'next/font/google'
 
@@ -29,6 +31,7 @@ export default function Home() {
     <Interests1 />
     <Interests2 />
     <Contact />
+    <Footer />
     </div>
   )
 }

@@ -86,18 +86,16 @@ const Navbar = () => {
           }
         >
           <div className="flex w-full items-center justify-between border-b border-gray-300 m4">
-            <Image
-              src="/../public/assets/revised-navbar-logo.png"
-              alt="/"
-              width="200"
-              height="75"
-            />
-            <div />
+            <h3 className="uppercase tracking-widest text-[#68B0AB]"> 
+            menu
+            </h3>
+           <div className="py-4">
             <div
               onClick={handleNav}
-              className="rounded-full shadow-lg shadow-[#8FC0A9] p-3 cursor-pointer"
+              className="rounded-full shadow-md shadow-gray-400 p-3 cursor-pointer scale-75"
             >
               <AiOutlineMenuFold size={25} />
+            </div>
             </div>
           </div>
           <div className="py-4 flex flec-col">
@@ -120,24 +118,15 @@ const Navbar = () => {
               <Link href="/#contact">
                 <li className="py-4 text-sm">Contact</li>
               </Link>
-              <div className="pt-40">
-                <p className="uppercase tracking-widest text-[#68B0AB]">
-                  Connect
-                </p>
-                <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4 ">
-                  <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
+              <div className="pt-35">
+                <div className="flex items-center justify-between  my-4 w-full sm:w-[80%] py-4 ">
+                  <div className="logo-container logo-item mr-2 rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
                     <a href="https://www.linkedin.com/in/anushkakulk">
                       <FaLinkedinIn />
                     </a>
                   </div>
 
-                  <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <a href="https://github.com/anushkakulk">
-                      <FaGithub />
-                    </a>
-                  </div>
-
-                  <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="logo-container logo-item ml-2 rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
                     <a href="mailto:anushka.mkul@gmail.com">
                       <MdEmail />
                     </a>

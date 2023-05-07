@@ -25,7 +25,7 @@ const skillsList = [
     alt: "Web development logos",
   },
   {
-    name: "ReactJS",
+    name: "React",
     logo: ReactLogo,
     alt: "React logo",
   },
@@ -71,7 +71,7 @@ const Skills = () => {
                   />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center m-auto">
-                  <h3>{skill.name}</h3>
+                  <h3 className="text-xs sm:text-xl">{skill.name}</h3>
                 </div>
               </div>
             </div>

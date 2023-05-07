@@ -4,27 +4,25 @@ import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaSpotify, FaDiscord, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { RiCopyrightLine } from "react-icons/ri";
+
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import ReactTypingEffect from "react-typing-effect";
-import ContactImg from "../public/assets/profile-pic.png";
 
 const Contact = () => {
   return (
-    <div id="contact" className="relative w-full lg:h-screen py-20">
-      <div className="absolute bottom-0 w-full bg-gray-200 py-4 text-center">
-        <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-          <h2 className="uppercase text-3xl tracking-wident text-[#68B0AB]">
-            <ReactTypingEffect
-              text="Contact"
-              eraseDelay={5000}
-              eraseSpeed={100}
-              typingDelay={1000}
-            />
-          </h2>
+    <div id="contact" className="w-full lg:h-screen py-16">
+      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+        <h2 className="uppercase text-3xl text-center items-center tracking-wident text-[#68B0AB]">
+          <ReactTypingEffect
+            text="Contact"
+            eraseDelay={5000}
+            eraseSpeed={100}
+            typingDelay={1000}
+          />
+        </h2>
+        <div className="pt-8">
           <div>
-            <h2 className="py-2">Let's Connect</h2>
-            <p className="py-4">
+            <p className="py-4 text-center">
               I am best reachable by email, but feel free to approach me on
               these platforms.
             </p>
@@ -83,12 +81,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <p className="py-4">
-              Copyright 2023 Anushka Kulkarni. Built with Next.js and Tailwind.
-              Hosted on Github Pages.
-            </p>
           </div>
         </div>
       </div>

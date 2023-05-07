@@ -7,30 +7,33 @@ import Image from "next/image";
 
 const Interests2 = () => {
   return (
-    <div id="interests2" className="relative w-full lg:h-screen py-20">
-      <div className="max-w-[1240px] mx-auto flex flex-wrap">
+    <div id="interests2" className="w-full max-h-screen ">
+      <div className="max-w-[1240px] py-16 mx-auto flex flex-wrap">
         <div className="relative w-full">
-          <div className="text-center py-2">
-            <h2 className="absolute top-50 left-0 w-full text-center text-md font-bold">
-              <FaBook className="inline-block mr-2" />
-            </h2>
-            <p className="py-3 mt-10">a stroll through my bookshelf</p>
+          <div className="flex justify-center items-center ">
+            <h1 className="text-2xl">
+              <FaBook />
+            </h1>
           </div>
-          <div className="mx-auto max-w-screen-lg lg:h-[75%] md:h-[75%] pb-20 mt-2 overflow-hidden">
+          <p className="flex text-center py-4">
+            a stroll through the bookshelf: here are my latest and greatest
+            reads
+          </p>
+          <div className="mx-auto max-w-screen-lg lg:h-[75%]  pb-20 mt-2">
             <Carousel
               showArrows={true}
               showThumbs={true}
-              className="mx-auto max-w-screen-lg h-[500px] lg:h-[600px]"
+              className="mx-auto max-w-screen-lg h-screen sm:h-1/2 md:h-1/2 "
             >
               <div className="carousel-item">
                 <Image
                   src="/../public/assets/newer-mbf.png"
                   alt="Image mbf"
-                  className="fill h-full object-cover"
+                  className="fill h-full sm:object-cover"
                   width="700"
                   height="700"
                 />
-                <p className="legend text-md font-bold mt-2 sm:text-sm">
+                <p className="legend text-xs sm:text-lg font-bold mt-2 ">
                   <i>My Brilliant Friend</i>, set in the 1950s, is the first of
                   <i> The Neopolitan Novels</i>, a quartet that follows the
                   entire lives of two women who try to break free from their
@@ -43,30 +46,31 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/huis-close.png"
                   alt="Image ne"
-                  className="fill h-full object-cover"
+                  className="fill h-full sm:object-cover"
                   width="1000"
                   height="1000"
                 />
-                <p className="legend text-lg font-bold mt-2 sm:text-sm">
+                <p className="legend text-sm sm:text-lg font-bold mt-2 ">
                   Read in the summer before college, <i>No Exit</i> was a great
                   look into the chaos of existentialism. Short and sweet, it
                   really packs a punch and makes the reader ponder about the
-                  absurdity of our interactions with "the Other"{" "}
+                  absurdity of how we constantly perceive "the Other."{" "}
                 </p>
               </div>
               <div className="carousel-item">
                 <Image
                   src="/../public/assets/new-wh.png"
                   alt="Image wh"
-                  className="fill h-full object-cover"
+                  className="fill h-full sm:object-cover"
                   width="500"
                   height="500"
                 />
-                <p className="legend text-lg font-bold mt-2 sm:text-sm">
+                <p className="legend text-sm sm:text-lg font-bold mt-2">
                   <i>Wuthering Heights</i> has been my favorite novel since I
-                  was in 9th grade. I loved the drama, the mundanity, the gothic
-                  vibe, and definitely found it a very approachable read for
-                  being a 'classic.'{" "}
+                  was in 9th grade. I loved the drama, the gothic vibe, the
+                  detail on mundane affairs. I definitely found it a very
+                  approachable read for being a 'classic,' and am currently in
+                  the middle of a re-read.{" "}
                 </p>
               </div>
             </Carousel>

@@ -11,7 +11,8 @@ const MY_ID = process.env.CLIENT_ID;
 const MY_SECRET = process.env.CLIENT_SECRET;
 const MY_REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
-let access_token = 'BQDSxtUK7lw1ac3zM6YnQXKMQjgMDpKx0caZnX4xCUT9D92XrSggz1D-uj5s8NPQr0gHqODkZrTWxFseBLZWObqwHlbuZtXviFPmHxUDWV4Xjnl7qfZgg27_HjDUoZNrDfwMvlrzw3XUu8QxDB7W9bXlJC0YLTO15HyCpZm_vUgBtGsRalCqk3wSZc9q9CfohoNDtaErQi8mMVwOtne55nJHtOfEAY4ZtHmCDEBB1mS3MnLSxrZ-TghFXDfVkPU8Viy5ZseXBijCe8CsXUrzPhOc3PZV';
+let access_token =
+'BQCV56Z17r5lMqZD9Qy2Km1gaYe7zS7XDkMxz3EdDDJj1uU81eGbDtbzHilOVgdierrsfvp2qSxbe-bVmBh-_s38Ux863jMhYB50X73F_0_exJiyJWRe0RioiLaa7LozCPXLLYCNyFs3rmkPMJ-I-XCZiJHuhBCo_KgpFUqEwO5_dED-4W0-F-uiuN9WEqgzUQIfj_eDyw0WMmyGMQzq8Bnc1f9JifQKG3iKK87A0F8eTpWY-rtsKRiT7WH50C8eyX2S7FrbNWwCY6zqIYKS0OsHoJxj';
 console.log(process.env.CLIENT_ID);
 
 async function refreshAccessToken() {
@@ -115,18 +116,19 @@ const Interests1 = () => {
   return (
     <div
       id="interests1"
-      className="w-full lg:h-screen pt-10 p-2"
+      className="w-full lg:h-screen pt-10 p-2 mb-8 lg:mb-0"
       ref={interestsRef}
     >
-      <div className="max-w-6xl mx-auto flex flex-wrap">
+      <div className="max-w-6xl py-8 mx-auto flex flex-wrap">
         <div className="w-full lg:w-1/2 p-4">
-          <h2 className="uppercase text-3xl md:text-3xl text-center tracking-wider pt-10 text-[#68B0AB]">
+          <h2 className="uppercase text-xl md:text-3xl text-center tracking-wider pt-10 text-[#68B0AB]">
             <ReactTypingEffect
               text="Current state of Anushka"
               eraseDelay={5000}
               eraseSpeed={100}
               typingSpeed={100}
               typingDelay={1000}
+              className="text-l md:text-3xl"
             />
           </h2>
         </div>
@@ -138,10 +140,10 @@ const Interests1 = () => {
           </p>
         </div>
         <div className="max-w-6xl mx-auto flex flex-col justify-center h-full">
-          <h2 className="uppercase text-lg md:text-lg text-center m-auto items-center tracking-wider py-2">
+          <h1 className="uppercase text-xl md:text-lg text-center m-auto text-mdfont-bold items-center tracking-wider py-2">
             <FaMusic />
-          </h2>
-          <div className="w-full p-4">
+          </h1>
+          <div className="max-w-6xl p-4">
             <p className="text-center text-sm pt-2 max-w-2xl mx-auto md:max-w-none">
               As a lover of music and algorithms, Spotify has my heart. I'm
               hoping to fiddle around with the Spotify Web API soon and create
@@ -150,7 +152,7 @@ const Interests1 = () => {
               top tracks from the last 30 days. Check back soon for updates!
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-8 md:flex-row sm:flex-row justify-center items-center my-3 mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {topTracks.slice(0, 3).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
@@ -166,7 +168,7 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
-          <div className="flex gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {topTracks.slice(3, 5).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
@@ -194,14 +196,13 @@ const Interests1 = () => {
               Refresh Recommendations
             </button>
           </div>
-
-          <div className="flex flex-wrap gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommendations.slice(0, 3).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
                   uri.split(":")[2]
                 }`}
-                width="300"
+                width="100%"
                 height="80"
                 frameBorder="0"
                 allowtransparency="true"
@@ -211,13 +212,13 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
-          <div className="flex gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommendations.slice(3, 5).map(({ id, name, artists, uri }) => (
               <iframe
                 src={`https://open.spotify.com/embed/track/${
                   uri.split(":")[2]
                 }`}
-                width="300"
+                width="100%"
                 height="80"
                 frameBorder="0"
                 allowtransparency="true"
@@ -227,10 +228,30 @@ const Interests1 = () => {
               ></iframe>
             ))}
           </div>
-        </div>
+ 
+        </div>   
       </div>
     </div>
   );
 };
 
 export default Interests1;
+
+{
+  /* <div className="grid grid-cols-3 gap-8 md:flex-row sm:flex-row justify-center items-center my-3 mx-auto ">
+{topTracks.slice(0, 3).map(({ id, name, artists, uri }) => (
+  <iframe
+    src={`https://open.spotify.com/embed/track/${
+      uri.split(":")[2]
+    }`}
+    width="100%"
+    height="80"
+    frameBorder="0"
+    allowtransparency="true"
+    allow="encrypted-media"
+    key={id}
+    className={`transform ${isVisible ? "fade-upwards" : ""}`}
+  ></iframe>
+))}
+</div> */
+}

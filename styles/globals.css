@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
+ html {
+  scroll-behavior: smooth!important;
   }
 
 @layer base {
@@ -12,6 +11,9 @@ html {
       @apply bg-[#F5F5F3] text-[#100F0D] tracking-wide
   }
 
+  p {
+    @apply text-gray-600
+  }
   h1, h2, h3, h4, h5, h5 {
     @apply font-bold
   }
@@ -111,26 +113,32 @@ iframe:hover {
   transform-origin: bottom left;
 }
 
-/* For screens smaller than 640px */
-@media (max-width: 640px) {
-  .carousel-root {
-    width: 100%;
-  }
-}
-
-/* For screens larger than 640px */
-@media (min-width: 641px) {
-  .carousel-root {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
 @media (max-width: 768px) {
   .legend {
     font-size: 0.8rem;
   }
 }
+
+
+/* Set the height of the carousel on larger screens */
+.carousel {
+  height: 500px; /* adjust the height to your needs */
+}
+
+/* Adjust the carousel on smaller screens */
+@media (max-width: 768px) {
+  /* Set the height of the carousel to auto to allow it to adjust to content */
+  .carousel {
+    height: auto;
+  }
+
+  /* Give the carousel container a maximum width to prevent it from overlapping other content */
+  .carousel-container {
+    max-width: 90%; /* adjust the max-width to your needs */
+    margin: 0 auto; /* center the container horizontally */
+  }
+}
+
 
 
 

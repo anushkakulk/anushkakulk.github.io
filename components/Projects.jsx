@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <div id='projects' className='w-full'>
       <div className='max-w-[1240px] mx-auto px-2 py-16'>
-      <h2 className="uppercase text-3xl py-2 pt-10 tracking-wident text-[#68B0AB]">
+      <h2 className="uppercase text-3xl py-8 pt-10 tracking-wident text-[#68B0AB]">
       <ReactTypingEffect text = "Projects" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
