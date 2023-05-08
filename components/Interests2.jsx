@@ -8,7 +8,7 @@ import Image from "next/image";
 const Interests2 = () => {
   return (
     <div id="interests2" className="w-full max-h-screen">
-      <div className="max-w-[1240px] lg:py-16 xl:p-64 xl:mb-40 mx-auto flex flex-wrap ">
+      <div className=" py-20 xl:p-40  xl:mb-40 mx-auto flex flex-wrap ">
         <div className="relative w-full">
           <div className="flex justify-center items-center ">
             <h1 className="text-2xl mb-6">
@@ -16,13 +16,13 @@ const Interests2 = () => {
             </h1>
             
           </div>
-          <p className="text-center text-sm p-5 max-w-2xl mx-auto md:max-w-none"> a stroll through the bookshelf: my latest and greatest reads</p>
+          <p className="text-center text-sm p-5 max-w-3xl mx-auto md:max-w-none"> A stroll through the bookshelf: my latest and greatest reads</p>
 
           <div className="mx-auto max-w-screen-lg lg:h-[75%]  pb-20 mt-2">
             <Carousel
               showArrows={true}
               showThumbs={false}
-              className="mx-auto max-w-screen-lg h-screen sm:h-1/2 md:h-1/2 "
+              className="mx-auto max-w-screen-lg h-screen  md:h-3/4"
             >
               <div className="carousel-item">
                 <Image

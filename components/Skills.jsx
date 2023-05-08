@@ -97,21 +97,21 @@ const Skills = () => {
             </div>
           </div>
           <div className="text-justify m-auto">
-            <p className="text-[#68B0AB] text-center text-lg mb-4">
+            <p className="text-[#68B0AB] text-center text-lg ">
               Relavent Coursework
             </p>
             <div className="grid grid-cols-2  gap-6 py-4">
               <div className="justify-center items-center text-center">
-                <p>Algorithms and Data</p>
-                <p>Object Oriented Design</p>
-                <p>Foundations of Cybersecurity</p>
-                <p>Game Programming</p>
+                <p className="py-1">Algorithms and Data</p>
+                <p className="py-1">Object Oriented Design</p>
+                <p className="py-1">Foundations of Cybersecurity</p>
+                <p className="py-1">Game Programming</p>
               </div>
               <div className="justify-center items-center text-center">
-                <p>Database Design</p>
-                <p>Artificial Intelligence</p>
-                <p>Robotic Science and Systems</p>
-                <p>Computer Systems</p>
+              <p className="py-1">Database Design</p>
+              <p className="py-1">Artificial Intelligence</p>
+              <p className="py-1">Robotic Science and Systems</p>
+              <p className="py-1">Computer Systems</p>
               </div>
             </div>
           </div>
