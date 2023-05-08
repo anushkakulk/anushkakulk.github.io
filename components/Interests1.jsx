@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import { FaMusic } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // import carousel css
-import { Carousel } from "react-responsive-carousel"; // import carousel component
-import { ImageCarousel } from "../lib/books";
-import Image from "next/image";
 
 const Interests1 = () => {
   const [tracks, setTracks] = useState([]);
