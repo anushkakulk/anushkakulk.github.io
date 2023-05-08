@@ -84,7 +84,7 @@ const Skills = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 py-4">
               <div className="justify-center items-center text-center">
-                <p>SQL</p>
+                <p>MySQL</p>
                 <p>NodeJS</p>
                 <p>Tailwind</p>
             

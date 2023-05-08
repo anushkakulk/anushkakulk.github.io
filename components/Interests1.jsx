@@ -1,9 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactTypingEffect from "react-typing-effect";
-import { FaMusic } from "react-icons/fa";
+import { FaMusic, FaSpotify } from "react-icons/fa";
 
 const Interests1 = () => {
   const [tracks, setTracks] = useState([]);
+  const [songData, setSongData] = useState({
+    isPlaying: false,
+    title: "",
+    artist: "",
+    album: "",
+    albumImageUrl: "",
+    songUrl: "",
+  });
 
   useEffect(() => {
     const fetchTracks = async () => {
@@ -14,11 +22,24 @@ const Interests1 = () => {
     fetchTracks();
   }, []);
 
+  useEffect(() => {
+    async function getSongData() {
+      const res = await fetch("/api/now-playing");
+      const data = await res.json();
+      setSongData(data);
+    }
+
+    const intervalId = setInterval(() => {
+      getSongData();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const { isPlaying, title, artist, album, albumImageUrl, songUrl } = songData;
+
   return (
-    <div
-      id="interests1"
-      className="w-full lg:h-screen pt-10 p-2 mb-8 "
-    >
+    <div id="interests1" className="w-full lg:h-screen pt-10 p-2 mb-8 ">
       <div className="max-w-6xl py-8 mx-auto flex flex-wrap">
         <div className="w-full lg:w-1/2 p-4">
           <h2 className="uppercase text-xl md:text-3xl text-center tracking-wider pt-10 text-[#68B0AB]">
@@ -47,39 +68,60 @@ const Interests1 = () => {
               As a lover of music and algorithms, Spotify has my heart. I'm
               hoping to fiddle around with the Spotify Web API soon and create
               something that combines my passions. For now, enjoy what I'm
-              listening to, courtesy of some automated API calls! Here are my
-              top tracks from the last 30 days, updated daily.
+              listening to, courtesy of API integration! Here are my
+              top 5 tracks from the last 30 days, updated daily.
             </p>
           </div>
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {tracks.slice(0, 3).map((track) => (
-             
-                <iframe
-                  src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
-                    track.url
-                  )}`}
-                  width="100%"
-                  height="270"
-                  frameBorder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              
+              <iframe
+                src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
+                  track.url
+                )}`}
+                width="100%"
+                height="270"
+                frameBorder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              ></iframe>
             ))}
           </div>
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
             {tracks.slice(3, 5).map((track) => (
+              <iframe
+                src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
+                  track.url
+                )}`}
+                width="100%"
+                height="270"
+                frameBorder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              ></iframe>
+            ))}
+          </div>
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
+            {isPlaying ? (
+              <div>
+                 <div className="flex justify-center items-center py-4">
+                  <FaSpotify className=" mr-2 mb-2" />
+                  <p className="text-center mb-2 text-[#68B0AB] text-md">Now Playing:</p>
+                </div>
                 <iframe
                   src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
-                    track.url
+                    songUrl
                   )}`}
                   width="100%"
-                  height="270"
+                  height="80"
                   frameBorder="0"
                   allowtransparency="true"
                   allow="encrypted-media"
-                ></iframe>              
-            ))}
+
+                ></iframe>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

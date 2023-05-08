@@ -7,10 +7,10 @@ import Image from "next/image";
 const Interests2 = () => {
   return (
     <div id="interests2" className="w-full max-h-screen">
-      <div className=" py-20 xl:p-40  xl:mb-40 mx-auto flex flex-wrap ">
+      <div className=" py-20 lg:py-40 xl:mb-40 mx-auto flex flex-wrap ">
         <div className="relative w-full">
           <div className="flex justify-center items-center ">
-            <h1 className="text-2xl mb-6">
+            <h1 className="text-2xl lg:pt-40 mb-6">
               <FaBook />
             </h1>
             
@@ -27,7 +27,7 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/newer-mbf.png"
                   alt="Image mbf"
-                  className="fill h-full sm:object-cover"
+                  className="fill h-full "
                   width="700"
                   height="700"
                 />
@@ -44,7 +44,7 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/huis-close.png"
                   alt="Image ne"
-                  className="fill h-full sm:object-cover"
+                  className="fill h-full "
                   width="1000"
                   height="1000"
                 />
@@ -58,7 +58,7 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/new-wh.png"
                   alt="Image wh"
-                  className="fill h-full sm:object-cover"
+                  className="fill h-full "
                   width="500"
                   height="500"
                 />
