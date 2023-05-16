@@ -3,6 +3,9 @@ import { FaBook } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // import carousel css
 import { Carousel } from "react-responsive-carousel"; // import carousel component
 import Image from "next/image";
+import mbf from "../public/assets/covers/newer-mbf.png";
+import ne from "../public/assets/covers/huis-close.png";
+import wh from "../public/assets/covers/new-wh.png";
 
 const Interests2 = () => {
   return (
@@ -25,7 +28,7 @@ const Interests2 = () => {
             >
               <div className="carousel-item">
                 <Image
-                  src="/../public/assets/newer-mbf.png"
+                  src={mbf}
                   alt="Image mbf"
 
                   width="700"
@@ -42,7 +45,7 @@ const Interests2 = () => {
               </div>
               <div className="carousel-item">
                 <Image
-                  src="/../public/assets/huis-close.png"
+                  src={ne}
                   alt="Image ne"
 
                   width="1000"
@@ -56,7 +59,7 @@ const Interests2 = () => {
               </div>
               <div className="carousel-item">
                 <Image
-                  src="/../public/assets/new-wh.png"
+                  src={wh}
                   alt="Image wh"
 
                   width="500"

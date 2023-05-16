@@ -5,6 +5,8 @@ import Link from "next/link";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import navLogo from "../public/assets/covers/revised-navbar-logo.png";
+ 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -54,7 +56,7 @@ useEffect(() => {
       {router.pathname === '/' && (
         <Link href="/">
           <Image
-            src="/assets/revised-navbar-logo.png"
+            src={navLogo}
             alt="/"
             width="300"
             height="100"

@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import ReactTypingEffect from 'react-typing-effect';
+import profilepic from '../public/assets/covers/profile.png';
+
 
 const About = () => {
   return (
@@ -46,7 +48,7 @@ const About = () => {
         <div className="col-span-1 w-full h-auto m-wto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-.5 hover:scale-105 ease-in duration-300">
           <Image
             className="rounded-xl"
-            src="/../public/assets/profile.png"
+            src={profilepic}
             alt="/"
             width="325"
             height="75"
