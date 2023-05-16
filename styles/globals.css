@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://rsms.me/inter/inter.css');
+
 
  html {
   scroll-behavior: smooth!important;
@@ -139,7 +139,6 @@ iframe:hover {
     margin: 0 auto; /* center the container horizontally */
   }
 }
-
 
 
 
