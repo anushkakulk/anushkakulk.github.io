@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
@@ -8,7 +9,23 @@ import { MdEmail } from "react-icons/md";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-
+  const router = useRouter();
+  const [navBg, setNavBg] = useState('#F5F5F3');
+  const [linkColor, setLinkColor] = useState('#1f2937');
+useEffect(() => {
+    if (
+      router.asPath === '/property' ||
+      router.asPath === '/crypto' ||
+      router.asPath === '/netflix' ||
+      router.asPath === '/twitch'
+    ) {
+      setNavBg('transparent');
+      setLinkColor('#F5F5F3');
+    } else {
+      setNavBg('#F5F5F3');
+      setLinkColor('#1f2937');
+    }
+  }, [router]);
   const handleNav = () => {
     setNav(!nav);
   };
@@ -26,23 +43,26 @@ const Navbar = () => {
 
   return (
     <div
-      className={
-        shadow
-          ? "fixed w-full h-22 shadow-xl z-[100]"
-          : "fixed w-full h-22  z-[100]"
-      }
-    >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px16">
+    style = {{backgroundColor: `${navBg}`}}
+    className={
+      shadow
+        ? "fixed w-full h-22 shadow-xl z-[100]"
+        : "fixed w-full h-22  z-[100]"
+    }
+  >
+    <div className="flex justify-between items-center w-full h-full px-2 2xl:px16">
+      {router.pathname === '/' && (
         <Link href="/">
           <Image
-            src="/../public/assets/static/revised-navbar-logo.png"
+            src="/assets/static/revised-navbar-logo.png"
             alt="/"
             width="300"
             height="100"
           />
         </Link>
+      )}
         <div>
-          <ul className="hidden md:flex">
+        <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
@@ -68,7 +88,8 @@ const Navbar = () => {
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className="md:hidden">
+          <div
+            style={{ color: `${linkColor}` }} onClick={handleNav} className="md:hidden">
             <AiOutlineMenuUnfold size={25} />
           </div>
         </div>
@@ -99,24 +120,24 @@ const Navbar = () => {
           <div className="py-4 flex flec-col">
             <ul className="uppercase">
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Home</li>
               </Link>
               <Link href="/#about">
-                <li className="py-4 text-sm">About</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">About</li>
               </Link>
               <Link href="/#skills">
-                <li className="py-4 text-sm">Skills</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Skills</li>
               </Link>
               <Link href="/#projects">
-                <li className="py-4 text-sm">Projects</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Projects</li>
               </Link>
               <Link href="/#interests1">
-                <li className="py-4 text-sm">Interests</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Interests</li>
               </Link>
               <Link href="/#contact">
-                <li className="py-4 text-sm">Contact</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Contact</li>
               </Link>
-              <div className="pt-35">
+              <div className="p-35">
                 <div className="flex items-center justify-between  my-4 w-full sm:w-[80%] py-4 ">
                   <div className="logo-container logo-item mr-2 rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
                     <a
