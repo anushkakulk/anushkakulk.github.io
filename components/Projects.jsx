@@ -4,6 +4,7 @@ import React from 'react';
 import multipleImg from '../public/assets/projects/multiPL-E.png';
 import aeroImg from '../public/assets/projects/revised-aero.png'
 import stonksImg from '../public/assets/projects/stonks.gif'
+import webImg from '../public/assets/covers/thisone.png'
 import ReactTypingEffect from 'react-typing-effect';
 import ProjectItem from './ProjectItem';
 
@@ -21,7 +22,12 @@ const Projects = () => {
             projectUrl='/aero'
             tech='C++'
           />
-         
+         <ProjectItem
+            title='Portfolio Website'
+            backgroundImg={webImg}
+            projectUrl='/portfoliowebsite'
+            tech='Next.js, Tailwind, Spotify API'
+          />
           <ProjectItem
             title='MultiPL-E Objective-C Translator'
             backgroundImg={multipleImg}
@@ -34,6 +40,7 @@ const Projects = () => {
             projectUrl='/firstgame'
             tech='Unity, C#'
           />
+          
         </div>
       </div>
     </div>
