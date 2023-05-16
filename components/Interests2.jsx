@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Interests2 = () => {
   return (
-    <div id="interests2" className="w-full max-h-screen">
-      <div className=" py-20 lg:py-40 xl:mb-40 mx-auto flex flex-wrap ">
+    <div id='interests2' className='w-full'>
+    <div className='max-w-[1240px] mx-auto py-20 flex flex-wrap'>
         <div className="relative w-full">
           <div className="flex justify-center items-center ">
             <h1 className="text-2xl lg:pt-40 mb-6">
@@ -17,17 +17,17 @@ const Interests2 = () => {
           </div>
           <p className="text-center text-sm p-5 max-w-3xl mx-auto md:max-w-none"> A stroll through the bookshelf: my latest and greatest reads</p>
 
-          <div className="mx-auto max-w-screen-lg lg:h-[75%]  pb-20 mt-2">
+          <div className="mx-auto max-w-screen-lg h-screen lg:h-[75%] pb-20 mt-2">
             <Carousel
               showArrows={true}
               showThumbs={false}
-              className="mx-auto max-w-screen-lg h-screen  md:h-3/4"
+              className="mx-auto max-w-screen-lg h-screen md:h-3/4"
             >
               <div className="carousel-item">
                 <Image
                   src="/../public/assets/newer-mbf.png"
                   alt="Image mbf"
-                  className="fill h-full "
+
                   width="700"
                   height="700"
                 />
@@ -44,7 +44,7 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/huis-close.png"
                   alt="Image ne"
-                  className="fill h-full "
+
                   width="1000"
                   height="1000"
                 />
@@ -58,13 +58,13 @@ const Interests2 = () => {
                 <Image
                   src="/../public/assets/new-wh.png"
                   alt="Image wh"
-                  className="fill h-full "
+
                   width="500"
                   height="500"
                 />
                 <p className="legend text-sm sm:text-lg font-bold mt-2">
                   <i>Wuthering Heights</i> has been my favorite novel since I
-                  was in 9th grade. I loved the drama, the gothic vibe, the
+                  was in 9th grade. I loved the drama, the dark and dreary vibe, the
                   detail on mundane affairs. I definitely found it a very
                   approachable read for being a 'classic,' and am currently in
                   the middle of a re-read.{" "}

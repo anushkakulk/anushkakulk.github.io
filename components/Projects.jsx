@@ -15,22 +15,23 @@ const Projects = () => {
           <ReactTypingEffect text = "Projects" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
+        <ProjectItem
+            title='AerospaceNU Engine Control Software'
+            backgroundImg={aeroImg}
+            projectUrl='/aero'
+            tech='C++'
+          />
+         
           <ProjectItem
-            title='Objective-C Translator'
+            title='MultiPL-E Objective-C Translator'
             backgroundImg={multipleImg}
             projectUrl='/research'
             tech='Python, Obj-C, Code LLMs'
           />
-          <ProjectItem
-            title='AerospaceNU Engine Control Software'
-            backgroundImg={aeroImg}
-            projectUrl='/crypto'
-            tech='C++'
-          />
-          <ProjectItem
-            title='High School - Platformer Game'
+           <ProjectItem
+            title='Simple Platformer Game'
             backgroundImg={stonksImg}
-            projectUrl='/netflix'
+            projectUrl='/firstgame'
             tech='Unity, C#'
           />
         </div>

@@ -39,8 +39,8 @@ const Interests1 = () => {
   const { isPlaying, title, artist, album, albumImageUrl, songUrl } = songData;
 
   return (
-    <div id="interests1" className="w-full lg:h-screen pt-10 p-2 mb-8 ">
-      <div className="max-w-6xl py-8 mx-auto flex flex-wrap">
+    <div id='interests1' className='w-full'>
+      <div className='max-w-[1240px] mx-auto py-20 flex flex-wrap'>
         <div className="w-full lg:w-1/2 p-4">
           <h2 className="uppercase text-xl md:text-3xl text-center tracking-wider pt-10 text-[#68B0AB]">
             <ReactTypingEffect
@@ -65,12 +65,15 @@ const Interests1 = () => {
           </h1>
           <div className="max-w-6xl p-4">
             <p className="text-center text-sm pt-2 max-w-2xl mx-auto md:max-w-none">
-              As a lover of music and algorithms, Spotify has my heart. I'm
-              hoping to fiddle around with the Spotify Web API soon and create
-              something that combines my passions. For now, enjoy what I'm
-              listening to, courtesy of API integration! Here are my
-              top 5 tracks from the last 30 days, updated daily.
+              As a lover of music and algorithms, Spotify has my heart. Enjoy what I'm
+              listening to, courtesy of some Spotify Web API integration! 
             </p>
+            <div className="flex justify-center items-center py-4">
+                  <FaSpotify className=" mr-2" />
+                  <p className="text-center text-xs sm:text-lg text-[#68B0AB] text-md">My top tracks from the past month, updated daily:</p>
+                </div>
+           
+           
           </div>
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {tracks.slice(0, 3).map((track) => (
@@ -79,7 +82,7 @@ const Interests1 = () => {
                   track.url
                 )}`}
                 width="100%"
-                height="270"
+                height="240"
                 frameBorder="0"
                 allowtransparency="true"
                 allow="encrypted-media"
@@ -93,7 +96,7 @@ const Interests1 = () => {
                   track.url
                 )}`}
                 width="100%"
-                height="270"
+                height="240"
                 frameBorder="0"
                 allowtransparency="true"
                 allow="encrypted-media"
@@ -105,7 +108,7 @@ const Interests1 = () => {
               <div>
                  <div className="flex justify-center items-center py-4">
                   <FaSpotify className=" mr-2 mb-2" />
-                  <p className="text-center mb-2 text-[#68B0AB] text-md">Now Playing:</p>
+                  <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">Hey, I'm listening to music right now! Now playing:</p>
                 </div>
                 <iframe
                   src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
@@ -116,7 +119,6 @@ const Interests1 = () => {
                   frameBorder="0"
                   allowtransparency="true"
                   allow="encrypted-media"
-
                 ></iframe>
               </div>
             ) : (

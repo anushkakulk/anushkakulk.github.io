@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import multipleImg from "../public/assets/projects/multiPL-E.png";
+import aeroImg from "../public/assets/projects/revised-aero.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
@@ -13,12 +13,12 @@ const research = () => {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={multipleImg}
+          src={aeroImg}
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">MultiPL-E Objective C Translator</h2>
-          <h3>Python / Objective C / Artificial Intelligence</h3>
+          <h2 className="py-2">AerospaceNU Engine Control Software</h2>
+          <h3>C++</h3>
         </div>
       </div>
 
@@ -27,24 +27,27 @@ const research = () => {
           <p>Project</p>
           <h2 className="py-2">Overview</h2>
           <p>
-            MultiPL-E is a multi-programming language benchmark for evaluating
-            the performance of code LLMs and is part of an initative headed by
-            Northeastern to work on the BigCode project, an open scientific
-            collaboration working on the responsible development of large
-            language models for code. I co-developed an Objective-C translator
-            to extend evaluation metric for MultiPL-E. This was a great
-            experience to get involved in the research process and learn more
-            about the fascinating world of large language models. 
+            AerospaceNU is Northeastern University's collegiate rocketry club. I
+            am active on the Propulsion Software team, where we are currently
+            creating software for optimally operating a liquid rocket engine
+            test stand. The most recent endeavor has been adding a proportional
+            valve to control kerosene flow during propellant fill,
+            pressurization, and flow stages; I built and tested support for the
+            proportional valve on the club's legacy engine control software. I
+            truly had meaningful interactions through learning from the
+            engineers behind the physical valve and collaborative discussions
+            regarding best options for implementation with the rest of the
+            software team.
           </p>
           <a
-            href="https://github.com/anushkakulk/MultiPL-E"
+            href="https://gitlab.com/anushka.mkul"
             target="_blank"
             rel="noreferrer"
           >
-            <button className="px-8 py-2 mt-4 mr-8">Code</button>
+            <button className="px-8 py-2 mt-4 mr-8">Gitlab</button>
           </a>
           <a
-            href="https://nuprl.github.io/MultiPL-E/"
+            href="https://www.aerospacenu.com/redshift"
             target="_blank"
             rel="noreferrer"
           >
@@ -56,18 +59,17 @@ const research = () => {
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Python
+                <RiRadioButtonFill className="pr-1" /> C++
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Jupyter Notebook
+                <RiRadioButtonFill className="pr-1" /> Arduino
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Objective-C
+                <RiRadioButtonFill className="pr-1" /> RaspberryPi
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Clang Compilers
+                <RiRadioButtonFill className="pr-1" /> Docker
               </p>
-
             </div>
           </div>
         </div>
