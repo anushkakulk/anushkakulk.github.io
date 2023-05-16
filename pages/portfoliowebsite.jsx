@@ -30,8 +30,8 @@ const portfoliowebsite = () => {
           <p className="py-2 ">
             While taking online classes during the summer, I decided to use my
             free time to work on developing a website of my own. I have had
-            limited experience with React and Node.js in high school but haven't
-            never actually deployed a web app into production
+            limited experience with React and Node.js in high school but have
+            never actually deployed a web app into production.
           </p>
           <p className="py-2 ">
             For this site, I used Next.js for server-side rendering and Tailwind
@@ -50,7 +50,7 @@ const portfoliowebsite = () => {
             learned a lot throughout this whole process. Working with the API
             has inspired me to take up some more projects tailored to my
             interests in music and machine learning, and I'm hoping to
-            successfully deploy a full-stack application in the future!
+            successfully deploy a full-stack application in the future.
           </p>
           <a
             href="https://github.com/anushkakulk/personal-website"
