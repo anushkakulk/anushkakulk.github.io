@@ -16,7 +16,7 @@ const About = () => {
             Originally from Delaware, I was lucky to attend a high school where
             computer science was taught in depth. I will never forget the
             enjoyment of staying past the normal class time to finish coding a
-            sudoku game in java and tinkering around in blender in 2018. Since
+            sudoku game in Java and tinkering around in Blender in 2018. Since
             then, I fell in love with the problem-solving and thinking outside
             the box that programming offers and quickly exhausted my high
             school's software development course offerings.
@@ -38,7 +38,7 @@ const About = () => {
             I really value the process of learning and work best when thrown
             into unknown territory. I'm ecstatic to continue working on current
             projects while also exploring the various niches of computer
-            science.
+            science!
           </p>
           </div>
         </div>

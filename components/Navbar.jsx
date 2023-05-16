@@ -54,7 +54,7 @@ useEffect(() => {
       {router.pathname === '/' && (
         <Link href="/">
           <Image
-            src="/assets/static/revised-navbar-logo.png"
+            src="/assets/revised-navbar-logo.png"
             alt="/"
             width="300"
             height="100"
