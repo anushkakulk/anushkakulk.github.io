@@ -6,7 +6,7 @@ import aeroImg from '../public/assets/projects/revised-aero.png'
 import stonksImg from '../public/assets/projects/stonks.gif'
 import webImg from '../public/assets/covers/thisone.png'
 import ReactTypingEffect from 'react-typing-effect';
-import ProjectItem from './ProjectItem';
+import ProjectItem from '../components/ProjectItem';
 
 const Projects = () => {
   return (
