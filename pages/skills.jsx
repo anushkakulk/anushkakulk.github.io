@@ -1,77 +1,80 @@
 import Image from "next/image";
-import React, { useEffect, useState, useRef } from "react";
-import JavaLogo from "../public/assets/skills/java-logo.png";
-import PythonLogo from "../public/assets/skills/python-logo-only.png";
-import WebDevLogos from "../public/assets/skills/revised-webdev.png";
-import ReactLogo from "../public/assets/skills/react-logo.webp";
-import CPPLogo from "../public/assets/skills/c++logo.png";
-import GithubLogo from "../public/assets/skills/github1.png";
+import React from "react";
+import { FaJava, FaPython, FaReact, FaGithub } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoCss3, IoLogoHtml5 } from "react-icons/io";
+import {BsGit} from "react-icons/bs"
+import { SiCplusplus, SiScikitlearn, SiTensorflow, SiMysql } from "react-icons/si";
 import ReactTypingEffect from "react-typing-effect";
 
 const skillsList = [
   {
     name: "Java",
-    logo: JavaLogo,
-    alt: "Java logo",
+    logo: <FaJava size={30} />,
   },
   {
     name: "Python",
-    logo: PythonLogo,
-    alt: "Python logo",
-  },
-  {
-    name: "Front-End",
-    logo: WebDevLogos,
-    alt: "Web development logos",
-  },
-  {
-    name: "React",
-    logo: ReactLogo,
-    alt: "React logo",
+    logo: <FaPython size={30} />,
   },
   {
     name: "C++",
-    logo: CPPLogo,
-    alt: "C++ logo",
+    logo: <SiCplusplus size={30} />,
+  },
+  
+  {
+    name: "Front-end",
+    logos: [<IoLogoHtml5  />, <IoLogoCss3 />, <IoLogoJavascript/>],
   },
   {
-    name: "Github",
-    logo: GithubLogo,
-    alt: "Github logo",
+    name: "React.js",
+    logo: <FaReact size={30} />,
+  },
+  {
+    name: "Git",
+    logo: <BsGit size={30} />,
+  },
+  {
+    name: "MySQL",
+    logo: <SiMysql size={30} />,
   },
 ];
 
 const Skills = () => {
+
   return (
-    <div id="skills" className="w-full h-full p-2 lg:h-screen">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+    <div id="skills" className="w-full p-2 lg:h-screen">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full py-16 xl:py-40">
         <div className="w-full">
           <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl text-center py-5">
             <ReactTypingEffect
               text="skills"
               eraseDelay={5000}
+
               eraseSpeed={100}
               typingDelay={1000}
             />
           </h2>
         </div>
-        <div className="grid grid-cols-3 gap-6 my-8">
+        <div className="grid grid-cols-3 gap-2 my-8 skills-container skills-item">
           {skillsList.map((skill, index) => (
             <div
               key={index}
-              className="shadow-xl rounded-xl py-2 hover:scale-105 ease-in  duration-300"
+              className="shadow-xl rounded-xl py-2 hover:scale-105 ease-in duration-300"
             >
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image
-                    src={skill.logo}
-                    width={64}
-                    height={64}
-                    alt={skill.alt}
-                  />
+              <div className="grid grid-cols-2  justify-center items-center">
+                <div className="m-auto skills-container skills-item">
+                  {skill.name === "Front-end"  || skill.name === "ML" ? (
+                    <div className="flex flex-row justify-center items-center">
+                      {skill.logos.map((logo, iconIndex) => (
+                        <div key={iconIndex}>{logo}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div>{skill.logo}</div>
+                  )}
                 </div>
+
                 <div className="flex flex-col items-center text-center justify-center m-auto">
-                  <h3 className="text-xs sm:text-xl">{skill.name}</h3>
+                  <h3 className="text-xs sm:text-lg py">{skill.name}</h3>
                 </div>
               </div>
             </div>
@@ -84,15 +87,14 @@ const Skills = () => {
             </p>
             <div className="grid grid-cols-2 gap-4 py-4">
               <div className="justify-center items-center text-center">
-                <p>MySQL</p>
-                <p>NodeJS</p>
+                <p>Docker</p>
+                <p>Node.js</p>
                 <p>Tailwind</p>
-            
               </div>
               <div className="justify-center items-center text-center">
-                <p>Docker</p>
                 <p>LaTeX</p>
                 <p>Microsoft Office</p>
+                <p>TensorFlow and scikit-learn</p>
               </div>
             </div>
           </div>
@@ -108,10 +110,10 @@ const Skills = () => {
                 <p className="py-1">Programming in C++</p>
               </div>
               <div className="justify-center items-center text-center">
-              <p className="py-1">Database Design</p>
-              <p className="py-1">Artificial Intelligence</p>
-              <p className="py-1">Robotic Science and Systems</p>
-              <p className="py-1">Computer Systems</p>
+                <p className="py-1">Database Design</p>
+                <p className="py-1">Artificial Intelligence</p>
+                <p className="py-1">Robotic Science and Systems</p>
+                <p className="py-1">Computer Systems</p>
               </div>
             </div>
           </div>

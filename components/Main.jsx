@@ -17,7 +17,7 @@ const Main = () => {
             with a passion for artificial intelligence, robotics, and
             linguistics. I love engaging in innovative software projects and
             acquiring new skills. Currently exploring responsive front-end web
-            applications (exhibit a: this site :) ) and data science projects.
+            applications (exhibit a: this site :) ) and machine learning applications.
           </p>
           
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4 ">

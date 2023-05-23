@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import multipleImg from "../public/assets/projects/multiPL-E.png";
-import { RiRadioButtonFill } from "react-icons/ri";
+import { BsCodeSlash, BsArrowRight } from "react-icons/bs";
+import { FiExternalLink } from "react-icons/fi";
+
 import Link from "next/link";
 
 const research = () => {
@@ -32,42 +34,50 @@ const research = () => {
             Northeastern to work on the BigCode project, an open scientific
             collaboration working on the responsible development of large
             language models for code. I co-developed an Objective-C translator
-            to extend evaluation metric for MultiPL-E. This was a great
-            experience to get involved in the research process and learn more
-            about the fascinating world of large language models. 
+            to extend evaluation metric for MultiPL-E. I really valued this
+            experience, as it was my first research opportunity and it
+            solidified my aspiration to work with Artificial Intelligence!
           </p>
-          <a
-            href="https://github.com/anushkakulk/MultiPL-E"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="px-8 py-2 mt-4 mr-8">Code</button>
-          </a>
-          <a
-            href="https://nuprl.github.io/MultiPL-E/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="px-8 py-2 mt-4">Website</button>
-          </a>
+
+          <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
+            <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
+              <a
+                href="https://github.com/anushkakulk/MultiPL-E"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <BsCodeSlash />
+                </div>
+              </a>
+              <a
+                href="https://nuprl.github.io/MultiPL-E/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <FiExternalLink />
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Python
+                <BsArrowRight className="pr-1" /> Python
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Jupyter Notebook
+                <BsArrowRight className="pr-1" /> Jupyter Notebook
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Objective-C
+                <BsArrowRight className="pr-1" /> Objective-C
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Clang Compilers
+                <BsArrowRight className="pr-1" /> Clang Compilers
               </p>
-
             </div>
           </div>
         </div>

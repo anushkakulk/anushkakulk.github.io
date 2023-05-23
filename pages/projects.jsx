@@ -21,24 +21,29 @@ const Projects = () => {
             backgroundImg={aeroImg}
             projectUrl='/aero'
             tech='C++'
+            className = " project-container project-item"
+            
           />
          <ProjectItem
             title='Portfolio Website'
             backgroundImg={webImg}
             projectUrl='/portfoliowebsite'
             tech='Next.js, Tailwind, Spotify API'
+            
           />
           <ProjectItem
             title='MultiPL-E Objective-C Translator'
             backgroundImg={multipleImg}
             projectUrl='/research'
             tech='Python, Obj-C, Code LLMs'
+           
           />
            <ProjectItem
             title='Simple Platformer Game'
             backgroundImg={stonksImg}
             projectUrl='/firstgame'
             tech='Unity, C#'
+            
           />
           
         </div>

@@ -6,7 +6,7 @@ import profilepic from '../public/assets/covers/profile.png';
 
 const About = () => {
   return (
-    <div id='about' className="w-full md:h=screen p-2 flex items-center ">
+    <div id='about' className="w-full p-2 flex items-center ">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-16 xl:py-40">
         <div className="col-span-2">
           <h2 className="uppercase text-3xl pt-10 tracking-widest text-[#68B0AB]">
@@ -45,6 +45,7 @@ const About = () => {
           </div>
         </div>
         
+        <div className="image-item"> 
         <div className="col-span-1 w-full h-auto m-wto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-.5 hover:scale-105 ease-in duration-300">
           <Image
             className="rounded-xl"
@@ -53,6 +54,7 @@ const About = () => {
             width="325"
             height="75"
           />
+        </div>
         </div>
       </div>
     </div>

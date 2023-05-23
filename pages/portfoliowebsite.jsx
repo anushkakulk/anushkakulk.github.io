@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import webImg from "../public/assets/covers/thisone.png";
-
-import { RiRadioButtonFill } from "react-icons/ri";
+import { BsCodeSlash, BsArrowRight } from "react-icons/bs";
+import { FiExternalLink } from "react-icons/fi";
+import { TbSourceCode } from "react-icons/tb";
 import Link from "next/link";
 
 const portfoliowebsite = () => {
@@ -34,50 +35,63 @@ const portfoliowebsite = () => {
             never actually deployed a web app into production.
           </p>
           <p className="py-2 ">
-            For this site, I used Next.js for server-side rendering and Tailwind
-            CSS for styling. As a music lover, I really wanted to showcase my
-            Spotify listening history for a personal flair without requiring
-            that a user login to their own account just to view my metadata. As
-            I had no experience with API integration prior, the process was
-            quite tough and I had trouble with bypassing the authorization
-            workflow (OAuth2). After lots of trial and error, I was able to
-            succesfully make API calls!
+            For this site, I decided to use Next.js and Tailwind CSS, as I had
+            seen some beautiful web apps created with a
+            Next.js/Tailwind/Firebase stack. As a music enthusiast, I wanted to
+            add a personal touch by showcasing my Spotify listening history.
+            However, I faced a few challenges when integrating the Spotify API,
+            particularly with making authenticated requests to the API without
+            requiring users to log in to their own accounts. Despite the initial
+            difficulties and numerous attempts, I persevered and successfully
+            managed to make API calls, using authorization code flow, allowing
+            me to display my Spotify metadata without compromising user
+            experience!
           </p>
           <p className="py-2 ">
-            The responsive design was also a challenge, as I really wanted this
-            to render nicely on mobile. Luckily, Tailwind was the perfect tool
-            for the job. As someone with not a lot of web dev experience, I
+            The responsive design was also a challenge, as I really wanted the
+            site to render nicely on mobile. Luckily, Tailwind was the perfect
+            tool for the job. As someone with not a lot of web dev experience, I
             learned a lot throughout this whole process. Working with the API
             has inspired me to take up some more projects tailored to my
-            interests in music and machine learning, and I'm hoping to
-            successfully deploy a full-stack application in the future.
+            interests in music and machine learning, and I'm hoping to deploy a
+            full-stack application in the future.
           </p>
-          <a
-            href="https://github.com/anushkakulk/personal-website"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="px-8 py-2 mt-4 mr-8">Code</button>
-          </a>
-          <a href="/lol" target="_blank" rel="noreferrer">
-            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          </a>
+          <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
+            <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
+              <a
+                href="https://github.com/anushkakulk/personal-website"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <BsCodeSlash />
+                </div>
+              </a>
+              <a href="/" target="_blank" rel="noreferrer">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <FiExternalLink />
+                </div>
+              </a>
+              <a href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow" target="_blank" rel="noreferrer">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <TbSourceCode />
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl sm:h-[70%] shadow-gray-400 rounded-xl py-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React/Next.js
+                <BsArrowRight className="pr-1" /> React.js/Next.js
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwind
+                <BsArrowRight className="pr-1" /> Tailwind
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Spotify Web API
-              </p>
-              <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Vercel
+                <BsArrowRight className="pr-1" /> Spotify Web API
               </p>
             </div>
           </div>
