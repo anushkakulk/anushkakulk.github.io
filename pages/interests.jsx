@@ -11,7 +11,6 @@ import wh from "../public/assets/covers/new-wh.png";
 
 const Interests = () => {
   const [tracks, setTracks] = useState([]);
-  const [refresh, setRefresh] = useState(false);
   const [recommended, setRecommended] = useState([]);
   const [isVisible, setIsVisible] = useState(false); // fade in state variable
   const interestsRef = useRef(null);
@@ -61,11 +60,9 @@ const Interests = () => {
       setRecommended(data);
     };
     fetchRecommended();
-  }, [refresh]);
+  }, []);
 
-  const handleRefresh = () => {
-    setRefresh(!refresh); // toggle refresh state
-  };
+
 
   useEffect(() => {
     async function getSongData() {
@@ -155,12 +152,14 @@ const Interests = () => {
               Check out some recommended songs based on my listening history:
             </p>
           </div>
-          <button
+          
+          {/* TODO: RECOMMENDATIONS NOT WORKING ONCE DEPLOYED
+           <button
             className="flex justify-center items-center my-3 p-4 max-w-6xl"
             onClick={() => setRefresh((prev) => !prev)}
           >
             Refresh Recommendations
-          </button>
+          </button> */}
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommended.slice(0, 3).map((track) => (
               <iframe
