@@ -18,7 +18,7 @@ A classic - built with react/next.js(framework) and tailwind css styling
 
 ## credits ##
 
-BOOKS (all credits to the original artists)
+BOOKS 
 
 - my brilliant friend cover art: https://www.europaeditions.co.uk/book/9781787702226/my-brilliant-friend
 - no exit cover art: https://www.etsy.com/listing/1181038593/no-exit-jean-paul-sartre-philosophy
@@ -27,3 +27,10 @@ BOOKS (all credits to the original artists)
 SPOTIFY WEB API 
 
 documentation and tutorial for authorization code flow: https://developer.spotify.com/documentation/web-api
+
+BLOGS FOR INSPO/HELP
+
+https://j471n.in/
+https://www.einargudni.com/
+https://portfolio-nextjs-two-iota.vercel.app/
+
