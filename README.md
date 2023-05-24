@@ -30,7 +30,7 @@ documentation and tutorial for authorization code flow: https://developer.spotif
 
 BLOGS FOR INSPO/HELP
 
-https://j471n.in/
-https://www.einargudni.com/
-https://portfolio-nextjs-two-iota.vercel.app/
+- https://j471n.in/
+- https://www.einargudni.com/
+- https://portfolio-nextjs-two-iota.vercel.app/
 
