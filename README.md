@@ -6,15 +6,15 @@ A classic - built with react/next.js(framework) and tailwind css styling
 
 ## current features/functionality ##
 - Spotify Web API integration to display my profile's metadata
+- ability to refresh recommended songs
 - fully responsive 
 - clean aesthetic (palette used: https://coolors.co/faf3dd-c8d5b9-8fc0a9-68b0ab-696d7d)
 - smooth scrolling
 - lazy loading
 
 ## future improvements/ideas ##
-- switch all sections to be individual pages instead of one long page with scrolling (aesthetic choice akjsdfbk)
 - possible blender/three.js animations to add some spice
-- typing animation (? is it kitschy...)
+- remove or keep typing animation (? is it kitschy...)
 
 ## credits ##
 
