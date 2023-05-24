@@ -229,7 +229,7 @@ const Interests = () => {
         <div className="relative w-full">
           
         <div className="flex justify-center items-center py-4">
-                  <FaBook className=" mr-2 mb-2" />
+                  <FaBook className="hidden md:block mr-2 mb-2" />
                   <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">
                     A stroll through my bookshelf: my latest and greatest reads
                   </p>

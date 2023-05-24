@@ -6,7 +6,7 @@ import profilepic from '../public/assets/covers/profile.png';
 
 const About = () => {
   return (
-    <div id='about' className="w-full p-2 flex items-center ">
+    <div id='about' className="w-full p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8 py-16 xl:py-40">
         <div className="col-span-2">
           <h2 className="uppercase text-3xl pt-10 tracking-widest text-[#68B0AB]">
