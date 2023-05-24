@@ -24,7 +24,7 @@ const firstgame = () => {
 
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
         <div className="col-span-4">
-          <p>Project</p>
+          <p>~/Projects/First-Game</p>
           <h2 className="py-2">Overview</h2>
           <p className="py-2 ">
             In 2020, as part of the Software Engineering course offered by my
@@ -73,7 +73,7 @@ const firstgame = () => {
             </div>
           </div>
         </div>
-        <Link href="/#projects">
+        <Link href="/projects">
           <p className="underline cursor-pointer py-5">Back</p>
         </Link>
       </div>
