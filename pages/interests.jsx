@@ -12,6 +12,7 @@ import wh from "../public/assets/covers/new-wh.png";
 const Interests = () => {
   const [tracks, setTracks] = useState([]);
   const [recommended, setRecommended] = useState([]);
+  const [refresh, setRefresh] = useState([]);
   const [isVisible, setIsVisible] = useState(false); // fade in state variable
   const interestsRef = useRef(null);
   const [songData, setSongData] = useState({
@@ -60,7 +61,7 @@ const Interests = () => {
       setRecommended(data);
     };
     fetchRecommended();
-  }, []);
+  }, [refresh]);
 
 
 
@@ -131,7 +132,7 @@ const Interests = () => {
               ></iframe>
             ))}
           </div>
-          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {tracks.slice(3, 5).map((track) => (
               <iframe
                 src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
@@ -153,13 +154,13 @@ const Interests = () => {
             </p>
           </div>
           
-          {/* TODO: RECOMMENDATIONS NOT WORKING ONCE DEPLOYED
+          {/* TODO: RECOMMENDATIONS NOT WORKING ONCE DEPLOYED */}
            <button
             className="flex justify-center items-center my-3 p-4 max-w-6xl"
             onClick={() => setRefresh((prev) => !prev)}
           >
             Refresh Recommendations
-          </button> */}
+          </button>
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommended.slice(0, 3).map((track) => (
               <iframe
@@ -176,7 +177,7 @@ const Interests = () => {
             ))}
           </div>
          
-          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
+          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
           
             {recommended.slice(3, 5).map((track) => (
               <iframe
