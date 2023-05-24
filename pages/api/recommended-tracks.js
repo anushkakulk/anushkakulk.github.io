@@ -1,8 +1,8 @@
-import { recommededTracks } from "../../lib/spotify";
+import { recommendedTracks } from "../../lib/spotify";
 
 export default async function handler(req, res) {
   try {
-    const response = await recommededTracks();
+    const response = await recommendedTracks();
     const data = await response.json();
 
     
