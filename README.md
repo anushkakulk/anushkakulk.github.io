@@ -15,6 +15,7 @@ A classic - built with react/next.js(framework) and tailwind css styling
 ## future improvements/ideas ##
 - possible blender/three.js animations to add some spice
 - remove or keep typing animation (? is it kitschy...)
+- instead of spotify's iframes, create custom music display/player
 
 ## credits ##
 
