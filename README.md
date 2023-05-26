@@ -6,19 +6,20 @@ A classic - built with react/next.js(framework) and tailwind css styling
 
 ## current features/functionality ##
 - Spotify Web API integration to display my profile's metadata
+- ability to refresh recommended songs
 - fully responsive 
 - clean aesthetic (palette used: https://coolors.co/faf3dd-c8d5b9-8fc0a9-68b0ab-696d7d)
 - smooth scrolling
 - lazy loading
 
 ## future improvements/ideas ##
-- switch all sections to be individual pages instead of one long page with scrolling (aesthetic choice akjsdfbk)
 - possible blender/three.js animations to add some spice
-- typing animation (? is it kitschy...)
+- remove or keep typing animation (? is it kitschy...)
+- instead of spotify's iframes, create custom music display/player
 
 ## credits ##
 
-BOOKS (all credits to the original artists)
+BOOKS 
 
 - my brilliant friend cover art: https://www.europaeditions.co.uk/book/9781787702226/my-brilliant-friend
 - no exit cover art: https://www.etsy.com/listing/1181038593/no-exit-jean-paul-sartre-philosophy
@@ -27,3 +28,10 @@ BOOKS (all credits to the original artists)
 SPOTIFY WEB API 
 
 documentation and tutorial for authorization code flow: https://developer.spotify.com/documentation/web-api
+
+BLOGS FOR INSPO/HELP
+
+- https://j471n.in/
+- https://www.einargudni.com/
+- https://portfolio-nextjs-two-iota.vercel.app/
+
