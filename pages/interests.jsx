@@ -8,7 +8,6 @@ import mbf from "../public/assets/covers/newer-mbf.png";
 import ne from "../public/assets/covers/huis-close.png";
 import wh from "../public/assets/covers/new-wh.png";
 
-
 const Interests = () => {
   const [tracks, setTracks] = useState([]);
   const [recommended, setRecommended] = useState([]);
@@ -62,8 +61,6 @@ const Interests = () => {
     };
     fetchRecommended();
   }, [refresh]);
-
-
 
   useEffect(() => {
     async function getSongData() {
@@ -148,15 +145,15 @@ const Interests = () => {
             ))}
           </div>
           <div className="flex justify-center items-center p-4 max-w-6xl">
-                  <FaSpotify className="hidden md:block mr-2" />
+            <FaSpotify className="hidden md:block mr-2" />
             <p className="text-center text-xs sm:text-lg text-[#68B0AB] text-md">
               Check out some recommended songs based on my listening history:
             </p>
           </div>
-          
+
           {/* TODO: RECOMMENDATIONS NOT WORKING ONCE DEPLOYED */}
-           <button
-            className="flex justify-center items-center my-3 p-4 max-w-6xl"
+          <button
+            className="flex justify-center items-center my-3 p-4 max-w-6xl hover:scale-105 ease-in duration-300"
             onClick={() => setRefresh((prev) => !prev)}
           >
             Refresh Recommendations
@@ -176,9 +173,8 @@ const Interests = () => {
               ></iframe>
             ))}
           </div>
-         
+
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
-          
             {recommended.slice(3, 5).map((track) => (
               <iframe
                 src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
@@ -192,31 +188,30 @@ const Interests = () => {
                 className={`transform ${isVisible ? "fade-upwards" : ""}`}
               ></iframe>
             ))}
-
           </div>
-          
+
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
             {isPlaying ? (
               <div>
                 <div className="image-item">
-                <div className="flex justify-center items-center py-4">
-                  <FaSpotify className=" mr-2 mb-2" />
-                  <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">
-                    Hey, I'm listening to music right now! Now playing:
-                  </p>
-                </div>
-                
-                <iframe
-                  src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
-                    songUrl
-                  )}`}
-                  width="100%"
-                  height="80"
-                  frameBorder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                  className="fade-in"
-                ></iframe>
+                  <div className="flex justify-center items-center py-4">
+                    <FaSpotify className=" mr-2 mb-2" />
+                    <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">
+                      Hey, I'm listening to music right now! Now playing:
+                    </p>
+                  </div>
+
+                  <iframe
+                    src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
+                      songUrl
+                    )}`}
+                    width="100%"
+                    height="80"
+                    frameBorder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                    className="fade-in"
+                  ></iframe>
                 </div>
               </div>
             ) : (
@@ -227,13 +222,12 @@ const Interests = () => {
       </div>
       <div className="max-w-[1240px] mx-auto py-20 flex flex-wrap">
         <div className="relative w-full">
-          
-        <div className="flex justify-center items-center py-4">
-                  <FaBook className="hidden md:block mr-2 mb-2" />
-                  <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">
-                    A stroll through my bookshelf: my latest and greatest reads
-                  </p>
-                </div>
+          <div className="flex justify-center items-center py-4">
+            <FaBook className="hidden md:block mr-2 mb-2" />
+            <p className="text-center mb-2 text-xs sm:text-lg text-[#68B0AB] text-md">
+              A stroll through my bookshelf: my latest and greatest reads
+            </p>
+          </div>
           <div className="mx-auto max-w-screen-lg h-screen lg:h-[75%] pb-20 mt-2">
             <Carousel
               showArrows={true}
