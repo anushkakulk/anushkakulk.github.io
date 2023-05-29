@@ -76,7 +76,7 @@ const research = () => {
                 <BsArrowRight className="pr-1" /> Objective-C
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <BsArrowRight className="pr-1" /> Clang Compilers
+                <BsArrowRight className="pr-1" /> Clang Compiler
               </p>
             </div>
           </div>

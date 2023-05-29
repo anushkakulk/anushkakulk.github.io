@@ -33,13 +33,12 @@ const research = () => {
             am active on the Propulsion Software team, where we are currently
             creating software for optimally operating a liquid rocket engine
             test stand. The most recent endeavor has been adding a proportional
-            valve to control kerosene flow during propellant fill,
-            pressurization, and flow stages; I built and tested support for the
-            proportional valve on the club's legacy engine control software. I
-            truly had meaningful interactions through learning from the
-            engineers behind the physical valve and collaborative discussions
-            regarding best options for implementation with the rest of the
-            software team.
+            valve to control kerosene flow during certain stages; I built and
+            tested support for the proportional valve on the club's legacy
+            engine control software. I truly had meaningful interactions through
+            learning from the engineers behind the physical valve and
+            collaborative discussions regarding best options for implementation
+            with the rest of the software team.
           </p>
           <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
             <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
