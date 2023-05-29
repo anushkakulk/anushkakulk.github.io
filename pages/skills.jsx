@@ -100,7 +100,7 @@ const Skills = () => {
           </div>
           <div className="text-justify m-auto">
             <p className="text-[#68B0AB] text-center text-lg ">
-              Relavent Coursework
+              Relevent Coursework
             </p>
             <div className="grid grid-cols-2  gap-6 py-4">
               <div className="justify-center items-center text-center">
