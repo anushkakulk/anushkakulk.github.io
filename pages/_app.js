@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
   <Navbar />
    <Component {...pageProps} />
    <Footer />
+   <Analytics />
    </>
   );
 }
