@@ -30,34 +30,33 @@ const firstgame = () => {
             In 2020, as part of the Software Engineering course offered by my
             high school, I worked in a team of 4 to develop a simple platformer
             game in Unity. The course was my first introduction to collaborative
-            coding, and encouraged us to use practices like Scrum and Agile
-            workflow frameworks to mimic actual product delivery as software
-            developers. I was nominated to be Scrum Master for my team and got
-            to lead weekly deliberation meetings to go over our progress.
-            Overall, the experience was very fulfilling, as I learned a lot of
-            game development skills (like game physics, debugging practices, and
-            a working C#/Unity proficiency) while getting a taste for the
-            software development process!
+            coding, and encouraged us to use practices like Agile workflow
+            frameworks to mimic actual product delivery as software developers.
+            I was nominated to be Scrum Master for my team and got to lead
+            weekly deliberation meetings to go over our progress and ensure we
+            were on track. Overall, the experience was very fulfilling, as I
+            learned a lot of game development skills (like game physics,
+            debugging practices, and a working C#/Unity proficiency) while
+            getting a taste for the software development process!
           </p>
           <p className="py-2 ">
             I do wish I saved the video showcasing the final demo, as the video
-            shown on this site is a small clip taken towards the beginning of the
-            project (which may be evident based on the <i>interesting...</i>{" "}
+            shown on this site is a small clip taken towards the beginning of
+            the project (which may be evident based on the <i>interesting...</i>{" "}
             game physics :0 )
           </p>
           <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
             <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
-             
-          <a
-            href="https://github.com/anushkakulk/demo"
-            target="_blank"
-            rel="noreferrer"
-          >
-             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <a
+                href="https://github.com/anushkakulk/demo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <BsCodeSlash />
                 </div>
-          </a>
-          </div>
+              </a>
+            </div>
           </div>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl sm:h-[50%] shadow-gray-400 rounded-xl py-4">
