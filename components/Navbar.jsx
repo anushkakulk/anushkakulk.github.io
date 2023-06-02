@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import navLogo from "../public/assets/covers/revised-navbar-logo.png";
+import navLogo from "../public/assets/covers/new-logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -62,7 +62,7 @@ const Navbar = () => {
             <Image
               src={navLogo}
               alt="/"
-              width="300"
+              width="300 "
               height="100"
               className="justify-start"
             />
