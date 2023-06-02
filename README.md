@@ -1,7 +1,7 @@
 # anushkakulkarni.vercel.app #
 this is my portfolio/personal website. this was mainly me fiddling with react lol.
 
-## stack ##
+## frontend ##
 A classic - built with react/next.js(framework) and tailwind css styling
 
 ## current features/functionality ##
