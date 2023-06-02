@@ -12,7 +12,7 @@ const Main = () => {
           <h1 className="py-4 text-[#696D7D]">
             hey, i'm <span className="text-[#68B0AB]"><ReactTypingEffect text="anushka!" eraseDelay={4000} eraseSpeed={100} typingDelay={1000}/></span>
           </h1>
-          <p className="py-4 text-gray-600 max-w-[50%] m-auto">
+          <p className="py-4 text-gray-600 max-w-[75%] sm:max-w-[50%] m-auto">
             I'm a second-year student at Northeastern University studying computer science,
             with a passion for artificial intelligence, robotics, and
             linguistics. I love engaging in innovative software projects and
