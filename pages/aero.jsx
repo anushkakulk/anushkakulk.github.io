@@ -33,7 +33,7 @@ const research = () => {
             am active on the Propulsion Software team, where we are currently
             creating software for optimally operating a liquid rocket engine
             test stand. The most recent endeavor has been adding a proportional
-            valve to control kerosene flow during certain stages; I built and
+            valve to control kerosene flow during propellant fill, flow, and pressurization stages; I built and
             tested support for the proportional valve on the club's legacy
             engine control software. I truly had meaningful interactions through
             learning from the engineers behind the physical valve and
