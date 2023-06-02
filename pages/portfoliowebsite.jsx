@@ -38,14 +38,13 @@ const portfoliowebsite = () => {
             For this site, I decided to use Next.js and Tailwind CSS, as I had
             seen some beautiful web apps created with a
             Next.js/Tailwind/Firebase stack. As a music enthusiast, I wanted to
-            add a personal touch by showcasing my Spotify listening history.
-            However, I faced a few challenges when integrating the Spotify API,
-            particularly with making authenticated requests to the API without
-            requiring users to log in to their own accounts. Despite the initial
-            difficulties and numerous attempts, I persevered and successfully
-            managed to make API calls, using authorization code flow, allowing
-            me to display my Spotify metadata without compromising user
-            experience!
+            add a personal touch by showcasing my Spotify listening history
+            without requiring that users sign in to their own account. However,
+            I faced a few challenges when integrating the Spotify API, since
+            this was my first time working with APIs. Despite the initial
+            difficulties, I successfully managed to make API calls, using
+            authorization code flow, allowing me to display my Spotify metadata
+            without compromising user experience!
           </p>
           <p className="py-2 ">
             The responsive design was also a challenge, as I really wanted the
@@ -72,7 +71,11 @@ const portfoliowebsite = () => {
                   <FiExternalLink />
                 </div>
               </a>
-              <a href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow" target="_blank" rel="noreferrer">
+              <a
+                href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <TbSourceCode />
                 </div>
