@@ -18,12 +18,12 @@ export default async function handler(req, res) {
       }));
   
   
-      // res.setHeader(
-      //   "Cache-Control",
-      //   "public, s-maxage=86400, stale-while-revalidate=43200"
-      // );
+      res.setHeader(
+        "Cache-Control",
+        "public, s-maxage=86400, stale-while-revalidate=43200"
+      );
   
-      res.setHeader("Cache-Control", "no-store");
+     // res.setHeader("Cache-Control", "no-store");
 
       return res.status(200).json(tracks);
   } catch (error) {
