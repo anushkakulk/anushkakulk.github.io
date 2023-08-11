@@ -137,7 +137,7 @@ const Interests = () => {
               </p>
             </div>
           </div>
-          {/* <div className="flex gap-4 justify-center sm:flex-row items-center my-3 mx-auto">
+          <div className="flex gap-4 justify-center sm:flex-row items-center my-3 mx-auto">
             {tracks.slice(0, 3).map((track) => (
               <TrackSection
                 key={track.trackId}
@@ -147,8 +147,19 @@ const Interests = () => {
                 coverImage={track.coverImage}
               />
             ))}
-          </div> */}
-          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
+          </div>
+          <div className="flex gap-4 justify-center sm:flex-row items-center my-3 mx-auto">
+            {tracks.slice(3, 5).map((track) => (
+              <TrackSection
+                key={track.trackId}
+                title={track.title}
+                url={track.url}
+                artist={track.artist}
+                coverImage={track.coverImage}
+              />
+            ))}
+          </div>
+          {/* <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {tracks.slice(0, 3).map((track) => (
               <iframe
                 src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
@@ -177,7 +188,7 @@ const Interests = () => {
                 className={`transform ${isVisible ? "fade-upwards" : ""}`}
               ></iframe>
             ))}
-          </div>
+          </div> */}
           <div className="flex justify-center items-center p-4 max-w-6xl">
             <FaSpotify className="hidden md:block mr-2" />
             <p className="text-center text-xs sm:text-lg text-[#68B0AB] text-md">
@@ -190,7 +201,29 @@ const Interests = () => {
           >
             Refresh Recommendations
           </button>
-          <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
+          <div className="flex gap-4 justify-center sm:flex-row items-center my-3 mx-auto">
+            {recommended.slice(0, 3).map((track) => (
+              <TrackSection
+                key={track.trackId}
+                title={track.title}
+                url={track.url}
+                artist={track.artist}
+                coverImage={track.coverImage}
+              />
+            ))}
+          </div>
+          <div className="flex gap-4 justify-center sm:flex-row items-center my-3 mx-auto">
+            {recommended.slice(3, 5).map((track) => (
+              <TrackSection
+                key={track.trackId}
+                title={track.title}
+                url={track.url}
+                artist={track.artist}
+                coverImage={track.coverImage}
+              />
+            ))}
+          </div>
+          {/* <div className="flex flex-col gap-8 justify-center sm:flex-row items-center my-3 mx-auto">
             {recommended.slice(0, 3).map((track) => (
               <iframe
                 src={`https://open.spotify.com/embed?uri=${encodeURIComponent(
@@ -220,7 +253,7 @@ const Interests = () => {
                 className={`transform ${isVisible ? "fade-upwards" : ""}`}
               ></iframe>
             ))}
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-8 justify-center sm:flex-row items-center mx-auto">
             {isPlaying ? (
