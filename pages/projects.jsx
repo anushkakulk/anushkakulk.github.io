@@ -5,6 +5,7 @@ import multipleImg from '../public/assets/projects/multiPL-E.png';
 import aeroImg from '../public/assets/projects/revised-aero.png'
 import stonksImg from '../public/assets/projects/stonks.gif'
 import webImg from '../public/assets/covers/thisone.png'
+import courtImg from '../public/assets/projects/courtUML.png';
 import ReactTypingEffect from 'react-typing-effect';
 import ProjectItem from '../components/ProjectItem';
 
@@ -16,7 +17,17 @@ const Projects = () => {
           <ReactTypingEffect text = "Projects" eraseDelay={5000} eraseSpeed={100} typingDelay={1000}/>
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
-        <ProjectItem
+        
+         
+          <ProjectItem
+            title='MultiPL-E Objective-C Translator'
+            backgroundImg={multipleImg}
+            projectUrl='/research'
+            tech='Python, Obj-C, Code LLMs'
+           
+          />
+          
+          <ProjectItem
             title='AerospaceNU Engine Control Software'
             backgroundImg={aeroImg}
             projectUrl='/aero'
@@ -24,19 +35,19 @@ const Projects = () => {
             className = " project-container project-item"
             
           />
-         <ProjectItem
+          <ProjectItem
+            title='Court Reservation System'
+            backgroundImg={courtImg}
+            projectUrl='/courtres'
+            tech='C++'
+            
+          />
+          <ProjectItem
             title='Portfolio Website'
             backgroundImg={webImg}
             projectUrl='/portfoliowebsite'
             tech='Next.js, Tailwind, Spotify API'
             
-          />
-          <ProjectItem
-            title='MultiPL-E Objective-C Translator'
-            backgroundImg={multipleImg}
-            projectUrl='/research'
-            tech='Python, Obj-C, Code LLMs'
-           
           />
            <ProjectItem
             title='Simple Platformer Game'
@@ -45,6 +56,7 @@ const Projects = () => {
             tech='Unity, C#'
             
           />
+          
           
         </div>
       </div>
