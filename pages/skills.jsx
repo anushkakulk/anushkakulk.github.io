@@ -33,7 +33,7 @@ const skillsList = [
     logo: <BsGit size={30} />,
   },
   {
-    name: "MySQL",
+    name: "SQL",
     logo: <SiMysql size={30} />,
   },
 ];
