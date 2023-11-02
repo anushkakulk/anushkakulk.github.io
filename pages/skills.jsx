@@ -100,17 +100,20 @@ const Skills = () => {
           </div>
           <div className="text-justify m-auto">
             <p className="text-[#68B0AB] text-center text-lg ">
-              Relevent Coursework
+              Relevant Coursework
             </p>
             <div className="grid grid-cols-2  gap-6 py-4">
               <div className="justify-center items-center text-center">
                 <p className="py-1">Algorithms and Data</p>
                 <p className="py-1">Object Oriented Design</p>
                 <p className="py-1">Programming in C++</p>
+                <p className="py-1">Artificial Intelligence</p>
               </div>
               <div className="justify-center items-center text-center">
                 <p className="py-1">Database Design</p>
+                <p className="py-1">Computer Systems</p>
                 <p className="py-1">Foundations of Cybersecurity</p>
+                <p className="py-1">Robotic Science and Systems</p>
                 {/* <p className="py-1">Artificial Intelligence</p>
                 <p className="py-1">Robotic Science and Systems</p>
                 <p className="py-1">Computer Systems</p> */}
