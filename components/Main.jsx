@@ -16,7 +16,7 @@ const Main = () => {
             I'm a second-year student at Northeastern University studying computer science,
             with a passion for artificial intelligence, robotics, and
             linguistics. I love engaging in innovative software projects and
-            acquiring new skills. Currently exploring responsive front-end web
+            acquiring new skills. Currently exploring responsive web
             applications (exhibit a: this site :) ) and machine learning projects.
           </p>
           
