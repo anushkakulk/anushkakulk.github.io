@@ -107,7 +107,7 @@ const Skills = () => {
                 <p className="py-1">Algorithms and Data</p>
                 <p className="py-1">Object Oriented Design</p>
                 <p className="py-1">Programming in C++</p>
-                <p className="py-1">Artificial Intelligence</p>
+                <p className="py-1">Machine Learning & Data Mining</p>
               </div>
               <div className="justify-center items-center text-center">
                 <p className="py-1">Database Design</p>
