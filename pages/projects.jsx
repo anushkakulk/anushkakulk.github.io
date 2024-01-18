@@ -4,6 +4,7 @@ import React from 'react';
 import multipleImg from '../public/assets/projects/multiPL-E.png';
 import aeroImg from '../public/assets/projects/revised-aero.png'
 import stonksImg from '../public/assets/projects/stonks.gif'
+import reversi from '../public/assets/projects/rev.gif'
 import webImg from '../public/assets/covers/thisone.png'
 import courtImg from '../public/assets/projects/courtUML.png';
 import ReactTypingEffect from 'react-typing-effect';
@@ -18,15 +19,15 @@ const Projects = () => {
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
         
-         
-          <ProjectItem
-            title='MultiPL-E Objective-C Translator'
-            backgroundImg={multipleImg}
-            projectUrl='/research'
-            tech='Python, Obj-C, Code LLMs'
-           
-          />
           
+        <ProjectItem
+            title='Reversi - MVC design'
+            backgroundImg={reversi}
+            projectUrl='/reversi'
+            tech='Java'
+            className = " project-container project-item"
+            
+          />
           <ProjectItem
             title='AerospaceNU Engine Control Software'
             backgroundImg={aeroImg}
@@ -43,6 +44,13 @@ const Projects = () => {
             
           />
           <ProjectItem
+            title='MultiPL-E Objective-C Translator'
+            backgroundImg={multipleImg}
+            projectUrl='/research'
+            tech='Python, Obj-C, Code LLMs'
+           
+          />
+          <ProjectItem
             title='Portfolio Website'
             backgroundImg={webImg}
             projectUrl='/portfoliowebsite'
@@ -50,14 +58,12 @@ const Projects = () => {
             
           />
            <ProjectItem
-            title='Simple Platformer Game'
+            title='First Project Ever - Simple Platformer Game'
             backgroundImg={stonksImg}
             projectUrl='/firstgame'
             tech='Unity, C#'
             
           />
-          
-          
         </div>
       </div>
     </div>

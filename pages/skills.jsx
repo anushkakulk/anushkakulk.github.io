@@ -10,35 +10,54 @@ const skillsList = [
   {
     name: "Java",
     logo: <FaJava size={30} />,
+    proficiency: .9,
+    experience: "Years: 4 | Classes: AP CS A, Fundamentals of Computer Science II, Object Oriented Design",
   },
   {
     name: "Python",
     logo: <FaPython size={30} />,
+    proficiency: .8,
+    experience: "Years: 2.5 | Classes: Mathematics of Data Models, Robotic Science and Systems, Machine Learning and Data Mining ",
+
+
   },
   {
-    name: "C++",
+    name: "C/C++",
     logo: <SiCplusplus size={30} />,
+    proficiency: .7,
+    experience: "Years: 2 | Classes: Programming in C++, Computer Systems.",
   },
   
   {
     name: "Front-end",
     logos: [<IoLogoHtml5  />, <IoLogoCss3 />, <IoLogoJavascript/>],
+    proficiency: .5,
+    experience: "Years: 1 | Classes: Web Application Development",
+
   },
   {
     name: "React.js",
     logo: <FaReact size={30} />,
+    proficiency: .4,
+    experience: "Years: 1 | No Formal Classes. Working on this website :)",
+
   },
   {
     name: "Git",
     logo: <BsGit size={30} />,
+    proficiency: .4,
+    experience: "Years: 2.5 | Used for most classes and projects",
   },
   {
     name: "SQL",
     logo: <SiMysql size={30} />,
+    proficiency: .4,
+    experience: "Years: 1.5 | Classes: Database Design",
   },
 ];
 
 const Skills = () => {
+  const getPercentage = (proficiency) => `${Math.round(proficiency * 100)}%`;
 
   return (
     <div id="skills" className="w-full p-2 lg:h-screen">
@@ -54,30 +73,50 @@ const Skills = () => {
             />
           </h2>
         </div>
-        <div className="grid grid-cols-3 gap-2 my-8 skills-container skills-item">
+           <div className="grid grid-cols-3 gap-2 my-8 skills-container skills-item">
           {skillsList.map((skill, index) => (
-            <div
-              key={index}
-              className="shadow-xl rounded-xl py-2 hover:scale-105 ease-in duration-300"
-            >
-              <div className="grid grid-cols-2  justify-center items-center">
-                <div className="m-auto skills-container skills-item">
-                  {skill.name === "Front-end"  || skill.name === "ML" ? (
-                    <div className="flex flex-row justify-center items-center">
-                      {skill.logos.map((logo, iconIndex) => (
-                        <div key={iconIndex}>{logo}</div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div>{skill.logo}</div>
-                  )}
-                </div>
-
-                <div className="flex flex-col items-center text-center justify-center m-auto">
-                  <h3 className="text-xs sm:text-lg py">{skill.name}</h3>
-                </div>
-              </div>
-            </div>
+               <div
+               key={index}
+               className="group relative overflow-hidden shadow-xl rounded-xl py-10 hover:scale-105 ease-in duration-300"
+             >
+               <div className="grid grid-cols-2 justify-center items-center">
+                 <div className="m-auto skills-container skills-item">
+                   {skill.name === "Front-end" || skill.name === "ML" ? (
+                     <div className="flex flex-row justify-center items-center">
+                       {skill.logos.map((logo, iconIndex) => (
+                         <div key={iconIndex}>{logo}</div>
+                       ))}
+                     </div>
+                   ) : (
+                     <div>{skill.logo}</div>
+                   )}
+                 </div>
+                 <div className="flex flex-col items-center text-center justify-center m-auto">
+                   <h3 className="text-xs sm:text-lg py">{skill.name}</h3>
+                   <div className="bar-container absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-r from-[#8FC0A9] to-[#C8D5B9] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                     <div
+                       className="bar-progress h-2 bg-black transition-width hover:scale-105 ease-in duration-300"
+                       style={{
+                         width: getPercentage(skill.proficiency),
+                       }}
+                     ></div>
+                     <p className="text-white text-sm">
+                       Proficiency:{' '}
+                       <span className="percentage">
+                         {getPercentage(skill.proficiency)}
+                       </span>
+              
+                     <p className="p-2 text-sm sm:text-xs md:text-sm lg:text-xs xl:text-sm 2xl:text-sm"> 
+                     Experience: <span className="percentage">{(skill.experience)}</span>
+                     </p>
+                    
+                   </p>
+                   </div>
+                   
+                 </div>
+               </div>
+             </div>
+        
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -90,11 +129,13 @@ const Skills = () => {
                 <p>Docker</p>
                 <p>Node.js</p>
                 <p>Tailwind</p>
+                <p>Tableau</p>
               </div>
               <div className="justify-center items-center text-center">
                 <p>LaTeX</p>
                 <p>Microsoft Office</p>
                 <p>TensorFlow and scikit-learn</p>
+                <p>Linux</p>
               </div>
             </div>
           </div>

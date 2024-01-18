@@ -167,6 +167,13 @@ iframe:hover {
   transition: transform .3s ease;
 }
 
+
+.bar-progress {
+  @apply transition-all hover:scale-105 ease-in duration-300;
+}
+
+
+
 .hoverEffect:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
