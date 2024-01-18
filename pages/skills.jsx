@@ -15,21 +15,21 @@ const skillsList = [
   {
     name: "Java",
     logo: <FaJava size={30} />,
-    proficiency: 0.9,
+    proficiency: 0.8,
     experience:
       "Years: 4 | Classes: AP CS A, Fundamentals of Computer Science II, Object Oriented Design",
   },
   {
     name: "Python",
     logo: <FaPython size={30} />,
-    proficiency: 0.8,
+    proficiency: 0.7,
     experience:
       "Years: 2.5 | Classes: Mathematics of Data Models, Robotic Science and Systems, Machine Learning and Data Mining ",
   },
   {
     name: "C/C++",
     logo: <SiCplusplus size={30} />,
-    proficiency: 0.7,
+    proficiency: 0.65,
     experience: "Years: 2 | Classes: Programming in C++, Computer Systems.",
   },
 
@@ -42,7 +42,7 @@ const skillsList = [
   {
     name: "React.js",
     logo: <FaReact size={30} />,
-    proficiency: 0.4,
+    proficiency: 0.35,
     experience: "Years: 1 | No Formal Classes. Working on this website :)",
   },
   {
