@@ -2,56 +2,59 @@ import Image from "next/image";
 import React from "react";
 import { FaJava, FaPython, FaReact, FaGithub } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoCss3, IoLogoHtml5 } from "react-icons/io";
-import {BsGit} from "react-icons/bs"
-import { SiCplusplus, SiScikitlearn, SiTensorflow, SiMysql } from "react-icons/si";
+import { BsGit } from "react-icons/bs";
+import {
+  SiCplusplus,
+  SiScikitlearn,
+  SiTensorflow,
+  SiMysql,
+} from "react-icons/si";
 import ReactTypingEffect from "react-typing-effect";
 
 const skillsList = [
   {
     name: "Java",
     logo: <FaJava size={30} />,
-    proficiency: .9,
-    experience: "Years: 4 | Classes: AP CS A, Fundamentals of Computer Science II, Object Oriented Design",
+    proficiency: 0.9,
+    experience:
+      "Years: 4 | Classes: AP CS A, Fundamentals of Computer Science II, Object Oriented Design",
   },
   {
     name: "Python",
     logo: <FaPython size={30} />,
-    proficiency: .8,
-    experience: "Years: 2.5 | Classes: Mathematics of Data Models, Robotic Science and Systems, Machine Learning and Data Mining ",
-
-
+    proficiency: 0.8,
+    experience:
+      "Years: 2.5 | Classes: Mathematics of Data Models, Robotic Science and Systems, Machine Learning and Data Mining ",
   },
   {
     name: "C/C++",
     logo: <SiCplusplus size={30} />,
-    proficiency: .7,
+    proficiency: 0.7,
     experience: "Years: 2 | Classes: Programming in C++, Computer Systems.",
   },
-  
+
   {
     name: "Front-end",
-    logos: [<IoLogoHtml5  />, <IoLogoCss3 />, <IoLogoJavascript/>],
-    proficiency: .5,
+    logos: [<IoLogoHtml5 />, <IoLogoCss3 />, <IoLogoJavascript />],
+    proficiency: 0.5,
     experience: "Years: 1 | Classes: Web Application Development",
-
   },
   {
     name: "React.js",
     logo: <FaReact size={30} />,
-    proficiency: .4,
+    proficiency: 0.4,
     experience: "Years: 1 | No Formal Classes. Working on this website :)",
-
   },
   {
     name: "Git",
     logo: <BsGit size={30} />,
-    proficiency: .4,
+    proficiency: 0.4,
     experience: "Years: 2.5 | Used for most classes and projects",
   },
   {
     name: "SQL",
     logo: <SiMysql size={30} />,
-    proficiency: .4,
+    proficiency: 0.4,
     experience: "Years: 1.5 | Classes: Database Design",
   },
 ];
@@ -62,61 +65,82 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full p-2 lg:h-screen">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full py-16 xl:py-40">
-        <div className="w-full">
-          <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl text-center py-5">
-            <ReactTypingEffect
-              text="skills"
-              eraseDelay={5000}
-
-              eraseSpeed={100}
-              typingDelay={1000}
-            />
-          </h2>
-        </div>
-           <div className="grid grid-cols-3 gap-2 my-8 skills-container skills-item">
+        <div className="grid grid-cols-3 gap-2 my-8 skills-container skills-item">
+          <div className="w-full">
+            <h2 className="uppercase text-2xl tracking-widest text-[#68B0AB] lg:text-3xl text-center py-7">
+              <ReactTypingEffect
+                text="skills"
+                eraseDelay={5000}
+                eraseSpeed={100}
+                typingDelay={1000}
+              />
+            </h2>
+          </div>
           {skillsList.map((skill, index) => (
-               <div
-               key={index}
-               className="group relative overflow-hidden shadow-xl rounded-xl py-10 hover:scale-105 ease-in duration-300"
-             >
-               <div className="grid grid-cols-2 justify-center items-center">
-                 <div className="m-auto skills-container skills-item">
-                   {skill.name === "Front-end" || skill.name === "ML" ? (
-                     <div className="flex flex-row justify-center items-center">
-                       {skill.logos.map((logo, iconIndex) => (
-                         <div key={iconIndex}>{logo}</div>
-                       ))}
-                     </div>
-                   ) : (
-                     <div>{skill.logo}</div>
-                   )}
-                 </div>
-                 <div className="flex flex-col items-center text-center justify-center m-auto">
-                   <h3 className="text-xs sm:text-lg py">{skill.name}</h3>
-                   <div className="bar-container absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-r from-[#8FC0A9] to-[#C8D5B9] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                     <div
-                       className="bar-progress h-2 bg-black transition-width hover:scale-105 ease-in duration-300"
-                       style={{
-                         width: getPercentage(skill.proficiency),
-                       }}
-                     ></div>
-                     <p className="text-white text-sm">
-                       Proficiency:{' '}
-                       <span className="percentage">
-                         {getPercentage(skill.proficiency)}
-                       </span>
-              
-                     <p className="p-2 text-sm sm:text-xs md:text-sm lg:text-xs xl:text-sm 2xl:text-sm"> 
-                     Experience: <span className="percentage">{(skill.experience)}</span>
-                     </p>
-                    
-                   </p>
-                   </div>
-                   
-                 </div>
-               </div>
-             </div>
-        
+            <div
+              key={index}
+              className="group relative overflow-hidden shadow-xl rounded-xl py-10 hover:scale-105 ease-in duration-300"
+            >
+              <div className="grid grid-cols-2 justify-center items-center">
+                <div className="m-auto skills-container skills-item">
+                  {skill.name === "Front-end" || skill.name === "ML" ? (
+                    <div className="flex flex-row justify-center items-center">
+                      {skill.logos.map((logo, iconIndex) => (
+                        <div key={iconIndex}>{logo}</div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div>{skill.logo}</div>
+                  )}
+                </div>
+
+                <h3 className="text-xs sm:text-lg py">{skill.name}</h3>
+                <div className="bar-container absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-r from-[#8FC0A9] to-[#C8D5B9] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex flex-col items-center text-center justify-center m-auto">
+                    <div className="flex justify-between mb-1">
+                      <span className="text-base font-medium text-blue-700 dark:text-white">
+                        Proficiency:
+                      </span>
+                      <span className="text-base text-center font-medium text-blue-700 dark:text-white">
+                        &nbsp;{getPercentage(skill.proficiency)}
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                      <div
+                        className="bg-blue-600 h-2.5 rounded-full"
+                        style={{
+                          width: getPercentage(skill.proficiency),
+                        }}
+                      ></div>
+                    </div>
+                    <div className="hidden sm:block">
+                      <p className="text-sm sm:text-xs sm:p-2 md:text-xs lg:text-xs xl:text-sm 2xl:text-sm">
+                        Experience:{" "}
+                        <span className="percentage">{skill.experience}</span>
+                      </p>
+                    </div>
+                  </div>
+                  {/* <div className="bar-container absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-r from-[#8FC0A9] to-[#C8D5B9] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                      className="bar-progress h-5 bg-white transition-width hover:scale-105 ease-in duration-300"
+                      style={{
+                        width: getPercentage(skill.proficiency),
+                      }}
+                    ></div>
+                    <p className="text-white text-sm">
+                      Proficiency:{" "}
+                      <span className="percentage">
+                        {getPercentage(skill.proficiency)}
+                      </span>
+                      <p className="text-sm sm:text-xs sm:p-2 md:text-xs lg:text-xs xl:text-sm 2xl:text-sm">
+                        Experience:{" "}
+                        <span className="percentage">{skill.experience}</span>
+                      </p>
+                    </p>
+                  </div> */}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
