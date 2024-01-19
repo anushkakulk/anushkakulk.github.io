@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import reversi from "../public/assets/projects/rev.gif";
+// import reversi from "../public/assets/projects/rev.gif";
 import { BsCodeSlash, BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
