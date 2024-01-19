@@ -5,7 +5,10 @@ import Link from "next/link";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import navLogo from "../public/assets/covers/new-logo.png";
+import navLogo from "../public/assets/covers/brack-log.png";
+
+
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -59,6 +62,7 @@ const Navbar = () => {
           <div className="flex items-center w-full h-full px-2 xl:px-16" />
         ) : (
           <Link href="/">
+           
             <Image
               src={navLogo}
               alt="/"

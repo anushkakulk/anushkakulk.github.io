@@ -3,7 +3,6 @@ import { FaLinkedinIn, FaGithub, FaGitlab } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ReactTypingEffect from 'react-typing-effect';
 
-
 const Main = () => {
   return (
     <div id='home' className="w-full h-screen text-center">
@@ -19,6 +18,8 @@ const Main = () => {
             acquiring new skills. Currently exploring responsive web
             applications (exhibit a: this site :) ) and machine learning projects.
           </p>
+          
+
           
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4 ">
             <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">

@@ -92,6 +92,17 @@
   animation-delay: 0.4s;
 }
 
+video:focus {
+  outline: none;
+}
+
+video {
+  outline: 2px solid transparent;
+}
+
+.no-outline {
+  outline: none;
+}
 
 .project-container {
   opacity: 0;
