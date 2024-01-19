@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-// import reversi from "../public/assets/projects/rev.gif";
+import reversi from "../public/assets/projects/revised-rev.gif";
 import { BsCodeSlash, BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
-const firstgame = () => {
+const reversi = () => {
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
@@ -100,4 +100,4 @@ const firstgame = () => {
   );
 };
 
-export default firstgame;
+export default reversi;
