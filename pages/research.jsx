@@ -42,7 +42,7 @@ const research = () => {
           <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
             <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
               <a
-                href="https://github.com/anushkakulk/MultiPL-E"
+                href="https://github.com/nuprl/MultiPL-E"
                 target="_blank"
                 rel="noreferrer"
               >
