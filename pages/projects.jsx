@@ -4,7 +4,7 @@ import React from 'react';
 import multipleImg from '../public/assets/projects/multiPL-E.png';
 import aeroImg from '../public/assets/projects/revised-aero.png'
 import stonksImg from '../public/assets/projects/stonks.gif'
-import reversi from '../public/assets/projects/revised-rev.gif'
+import reversi from '../public/assets/projects/reversidemo.gif'
 import webImg from '../public/assets/covers/thisone.png'
 import courtImg from '../public/assets/projects/courtUML.png';
 import ReactTypingEffect from 'react-typing-effect';
