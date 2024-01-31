@@ -42,7 +42,7 @@ const research = () => {
           </p>
           <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-4">
             <div className="logo-container logo-item mr-2 flex rounded-full shadow-lg shadow-[#8FC0A9] p-6">
-              <a
+              {/* <a
                 href="https://gitlab.com/anushka.mkul"
                 target="_blank"
                 rel="noreferrer"
@@ -50,7 +50,7 @@ const research = () => {
                 <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                   <BsCodeSlash />
                 </div>
-              </a>
+              </a> */}
               <a
                 href="https://www.aerospacenu.com/redshift"
                 target="_blank"
