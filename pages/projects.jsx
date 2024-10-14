@@ -7,7 +7,7 @@ import stonksImg from '../public/assets/projects/stonks.gif'
 import reversi from '../public/assets/projects/reversidemo.gif'
 import webImg from '../public/assets/covers/thisone.png'
 import tictactoe from '../public/assets/projects/tictactoegameplay.gif'
-
+import robotgrasp from '../public/assets/projects/robot-grasper.png'
 import courtImg from '../public/assets/projects/courtUML.png';
 import ReactTypingEffect from 'react-typing-effect';
 import ProjectItem from '../components/ProjectItem';
@@ -21,6 +21,15 @@ const Projects = () => {
           </h2>
         <div className='grid md:grid-cols-2 gap-8'>
         
+        <ProjectItem
+            title='Robot Grasp Detection Model'
+            backgroundImg={robotgrasp}
+            projectUrl='/graspsim'
+            tech='Python'
+            className = " project-container project-item"
+            
+          />
+    
         <ProjectItem
             title='Tic Tac Toe Robot Arm'
             backgroundImg={tictactoe}

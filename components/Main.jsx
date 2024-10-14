@@ -12,11 +12,11 @@ const Main = () => {
             hey, i'm <span className="text-[#68B0AB]"><ReactTypingEffect text="anushka!" eraseDelay={4000} eraseSpeed={100} typingDelay={1000}/></span>
           </h1>
           <p className="py-4 text-gray-600 max-w-[75%] sm:max-w-[50%] m-auto">
-            I'm a second-year student at Northeastern University studying computer science,
+            I'm a third-year student at Northeastern University studying computer science,
             with a passion for artificial intelligence, robotics, and
             linguistics. I love engaging in innovative software projects and
             acquiring new skills. Currently exploring responsive web
-            applications (exhibit a: this site :) ) and machine learning projects.
+            applications (exhibit a: this site :) ) as well as robotics and machine learning projects.
           </p>
           
 
@@ -50,16 +50,6 @@ const Main = () => {
                   >
 
                 <MdEmail />
-              </a>
-            </div>
-
-            <div className="logo-container logo-item rounded-full shadow-lg shadow-[#8FC0A9] p-5 cursor-pointer hover:scale-105 ease-in duration-300">
-            <a
-                    href="https://gitlab.com/anushka.mkul"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                <FaGitlab />
               </a>
             </div>
           </div>
